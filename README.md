@@ -24,3 +24,6 @@ Wir wollen die einzelnen Planeten in unserem Sonnensystem maßstabgetreu abbilde
 Wir möchten das Erlebnis von Archäologen spieler darstellen, es sind in einem Gittermuster Fossile versteckt, welche man ausgraben soll. Nach dem Freilegen von einem können Informationen dazu angezeigt werden.  
 Pitch ? "Postapokalypse"
 Ein Brettspiel zum Wiederaufbau einer Zivilisation nach einer Katastrophe.
+
+## Pitch 6 "Postapokalypse"
+Ein Brettspiel zum Wiederaufbau einer Zivilisation nach einer Katastrophe. 
