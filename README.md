@@ -9,16 +9,29 @@ Mitglieder:
 ## Pitch 3 “PC-Anleitung”
 PC-Erstbauer bekommen eine Anleitung, wie man einen Desktop zusammenstellt und die einzelnen Kabel und Komponenten verbindet. Diese Anleitung kommt mit Information zu den Komponenten sowie Dinge, auf die man achten muss. Der User kann die Spezifikation selbst auswählen.
 
-
-![UserDesignExperience](/UserDesignExperience.png)
-
-
-
-
-
-
-
 ---
+
+### Customer Journey anhand von Zack
+
+![UserDesignExperience](UserDesignExperience.png)
+
+#### 1
+Zack erhält die Erlaubnis sich einen PC zu kaufen
+#### 2
+zack ist aufgrund des Angebots gnadenlos überfordert und weiß nicht wie er eine Informierte Entscheidung treffen kann.
+#### 3
+Zack lernt unsere App durch ein Feature in einem Video kennen.
+#### 4
+Zack lädt sich diese App herunter und startet diese.
+#### 5
+Durch die einfachen Einstellungen der App wird der Kaufprozess einfah und klar gegliedert.
+#### 6
+Bei unsicherheiten besteht die Option mehr informationen zu den Themen zu erhalten um mehr Informationen zu erhalten
+#### 7
+Die App gibt Meldungen wenn einige Sachen unstimmig sind um fehler vorzubeugen.
+#### 8
+Durch die Hilfe konnte sich Zack seinen PC selbst bauen. 
+
 
 
 ## Pitch 1 “Humanity”:
