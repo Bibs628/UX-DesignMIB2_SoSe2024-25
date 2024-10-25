@@ -1,7 +1,7 @@
 # Personas
 
 
-![Zack](Personas\Persona-Zack.png)
+![[Personas\Persona-Zack.png]]
 **Nutzerkontext**: Zack ist Technik interessiert und ihm ist mehr als nur die Erfahrung wichtig. Durch sein Interesse an Technik kann er mit technischen Daten etwas anfangen und wünscht sich diese auch. Durch sein begrenztes Budget möchte er nicht auf Leistung verzichten aber ein gutes Aussehen ist ihm trotzdem wichtig um vor seinen Freunden angeben zu können. Eine Recht einfache und schnelle Durchführung durch die App ist ihm wichtig aber ohne viele Kompromisse einzugehen.
 
 ![Chrissy](Personas\Persona-Chrissy.png)
