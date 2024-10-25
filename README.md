@@ -11,28 +11,33 @@ PC-Erstbauer bekommen eine Anleitung, wie man einen Desktop zusammenstellt und d
 
 ---
 
-### Customer Journey anhand von Zack
+## Customer Journey anhand von Zack
 
 ![UserDesignExperience](Customer_Journey.png )
-
-#### 1
+Überschriften 
+#### 1 - Ok
 Zack erhält die Erlaubnis sich einen PC zu kaufen.
-#### 2
+#### 2 - Verwirrt
 Zack ist aufgrund des Angebots gnadenlos überfordert und weiß nicht wie er eine Informierte Entscheidung treffen kann.
-#### 3
+#### 3 - Empfehlung
 Zack lernt unsere App durch ein Feature in einem Video kennen.
-#### 4
+#### 4 - Download
 Zack lädt sich diese App herunter und startet diese.
-#### 5
+#### 5 - Durchführung
 Durch die einfachen Einstellungen der App wird der Kaufprozess einfach und klar gegliedert.
-#### 6
+#### 6 - Rückmeldungen
 Bei unsicherheiten besteht die Option mehr informationen zu den Themen zu erhalten um mehr Informationen zu erhalten.
-#### 7
+#### 7 - Wahrnung
 Die App gibt Meldungen, wenn einige Sachen unstimmig sind um Fehler vorzubeugen.
-#### 8
+#### 8 - Erfolg
 Durch die Hilfe konnte sich Zack seinen PC selbst bauen. 
 
+---
 
+Nutzungskontext -
+
+
+---
 
 ## Pitch 1 “Humanity”:
 Wir könnten versuchen, die Verbreitung des Menschen auf der Erde zu rekonstruieren und dies interaktiv gestalten indem wir ihm mehrmals die Option geben, wo sich die Bevölkerungsströme hinbewegen und das halt entsprechend mit Ereignissen unterstützt wird
