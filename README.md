@@ -13,7 +13,7 @@ PC-Erstbauer bekommen eine Anleitung, wie man einen Desktop zusammenstellt und d
 
 ### Customer Journey anhand von Zack
 
-![UserDesignExperience](UserDesignExperience.png)
+![UserDesignExperience](Customer_Journey.png)
 
 #### 1
 Zack erhält die Erlaubnis sich einen PC zu kaufen
