@@ -10,7 +10,7 @@ Mitglieder:
 PC-Erstbauer bekommen eine Anleitung, wie man einen Desktop zusammenstellt und die einzelnen Kabel und Komponenten verbindet. Diese Anleitung kommt mit Information zu den Komponenten sowie Dinge, auf die man achten muss. Der User kann die Spezifikation selbst auswählen.
 
 
-
+![UserDesignExperience](/UserDesignExperience.png)
 
 
 
