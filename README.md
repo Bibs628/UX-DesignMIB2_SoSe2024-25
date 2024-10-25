@@ -13,22 +13,22 @@ PC-Erstbauer bekommen eine Anleitung, wie man einen Desktop zusammenstellt und d
 
 ### Customer Journey anhand von Zack
 
-![UserDesignExperience](Customer_Journey.png)
+![UserDesignExperience](Customer_Journey.png )
 
 #### 1
-Zack erhält die Erlaubnis sich einen PC zu kaufen
+Zack erhält die Erlaubnis sich einen PC zu kaufen.
 #### 2
-zack ist aufgrund des Angebots gnadenlos überfordert und weiß nicht wie er eine Informierte Entscheidung treffen kann.
+Zack ist aufgrund des Angebots gnadenlos überfordert und weiß nicht wie er eine Informierte Entscheidung treffen kann.
 #### 3
 Zack lernt unsere App durch ein Feature in einem Video kennen.
 #### 4
 Zack lädt sich diese App herunter und startet diese.
 #### 5
-Durch die einfachen Einstellungen der App wird der Kaufprozess einfah und klar gegliedert.
+Durch die einfachen Einstellungen der App wird der Kaufprozess einfach und klar gegliedert.
 #### 6
-Bei unsicherheiten besteht die Option mehr informationen zu den Themen zu erhalten um mehr Informationen zu erhalten
+Bei unsicherheiten besteht die Option mehr informationen zu den Themen zu erhalten um mehr Informationen zu erhalten.
 #### 7
-Die App gibt Meldungen wenn einige Sachen unstimmig sind um fehler vorzubeugen.
+Die App gibt Meldungen, wenn einige Sachen unstimmig sind um Fehler vorzubeugen.
 #### 8
 Durch die Hilfe konnte sich Zack seinen PC selbst bauen. 
 
