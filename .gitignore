@@ -1,0 +1,10 @@
+# Godot specific ignores
+godotproject/.godot/
+godotproject/.import/
+godotproject/export.cfg
+godotproject/export_presets.cfg
+godotproject/*.translation
+godotproject/*.import
+
+# Android Export
+godotproject/android/

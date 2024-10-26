@@ -58,3 +58,7 @@ Ein Brettspiel zum Wiederaufbau einer Zivilisation nach einer Katastrophe.
 
 ## Pitch 6 "Postapokalypse"
 Ein Brettspiel zum Wiederaufbau einer Zivilisation nach einer Katastrophe. 
+    
+
+## Godot Documentation
+Java SDK: Java 23 OpenJDK  
