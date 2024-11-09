@@ -1,10 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://cdiesjj665g5o"]
 
-[ext_resource type="Script" path="res://Script/MainMenu.gd" id="2_3j52p"]
-[ext_resource type="Script" path="res://Script/Settings.gd" id="2_3jp27"]
+[ext_resource type="Script" path="res://Script/MenuMain.gd" id="2_3j52p"]
+[ext_resource type="Script" path="res://Script/MenuSettings.gd" id="2_3jp27"]
 
-[node name="Menu" type="Control"]
-layout_mode = 3
+[node name="Menu" type="CenterContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -12,87 +11,76 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="BG" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+custom_minimum_size = Vector2(1080, 2400)
+layout_direction = 1
+layout_mode = 2
 
-[node name="MenuBar" type="CenterContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MainMenu" type="VBoxContainer" parent="MenuBar"]
+[node name="Main" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(864, 50)
 layout_mode = 2
 script = ExtResource("2_3j52p")
 
-[node name="Start" type="MenuButton" parent="MenuBar/MainMenu"]
+[node name="Start" type="MenuButton" parent="Main"]
 custom_minimum_size = Vector2(0, 500)
 layout_mode = 2
 theme_override_font_sizes/font_size = 100
 text = "Start PC Config"
 flat = false
 
-[node name="Load" type="MenuButton" parent="MenuBar/MainMenu"]
+[node name="Load" type="MenuButton" parent="Main"]
 custom_minimum_size = Vector2(0, 500)
 layout_mode = 2
 theme_override_font_sizes/font_size = 100
 text = "Load PC Config"
 flat = false
 
-[node name="Settings" type="MenuButton" parent="MenuBar/MainMenu"]
+[node name="Settings" type="MenuButton" parent="Main"]
 custom_minimum_size = Vector2(0, 500)
 layout_mode = 2
 theme_override_font_sizes/font_size = 100
 text = "Settings"
 flat = false
 
-[node name="Exit" type="MenuButton" parent="MenuBar/MainMenu"]
+[node name="Exit" type="MenuButton" parent="Main"]
 custom_minimum_size = Vector2(0, 500)
 layout_mode = 2
 theme_override_font_sizes/font_size = 100
 text = "Exit PC Config"
 flat = false
 
-[node name="Settings" type="VBoxContainer" parent="MenuBar"]
+[node name="Settings" type="VBoxContainer" parent="."]
 visible = false
 custom_minimum_size = Vector2(864, 100)
 layout_mode = 2
 script = ExtResource("2_3jp27")
 
-[node name="Start" type="MenuButton" parent="MenuBar/Settings"]
+[node name="Start" type="MenuButton" parent="Settings"]
 custom_minimum_size = Vector2(0, 500)
 layout_mode = 2
 theme_override_font_sizes/font_size = 100
 text = "ququ"
 flat = false
 
-[node name="Load" type="MenuButton" parent="MenuBar/Settings"]
+[node name="Load" type="MenuButton" parent="Settings"]
 custom_minimum_size = Vector2(0, 500)
 layout_mode = 2
 theme_override_font_sizes/font_size = 100
 text = "keke"
 flat = false
 
-[node name="Settings" type="MenuButton" parent="MenuBar/Settings"]
+[node name="Settings" type="MenuButton" parent="Settings"]
 custom_minimum_size = Vector2(0, 500)
 layout_mode = 2
 theme_override_font_sizes/font_size = 100
 text = "kiki"
 flat = false
 
-[node name="BackToMenu" type="MenuButton" parent="MenuBar/Settings"]
+[node name="BackToMenu" type="MenuButton" parent="Settings"]
 custom_minimum_size = Vector2(0, 500)
 layout_mode = 2
 theme_override_font_sizes/font_size = 100
 text = "Back to Main Menu"
 flat = false
 
-[connection signal="pressed" from="MenuBar/MainMenu/Settings" to="MenuBar/Settings" method="on_switch_to_settings"]
-[connection signal="pressed" from="MenuBar/Settings/BackToMenu" to="MenuBar/MainMenu" method="on_switch_to_menu"]
+[connection signal="pressed" from="Main/Settings" to="Settings" method="on_switch_to_settings"]
+[connection signal="pressed" from="Settings/BackToMenu" to="Main" method="on_switch_to_menu"]
