@@ -1,12 +1,10 @@
 class_name MenuSettings
 extends BoxContainer
 
-
-var back_to_menu: MenuButton
+@onready var back_to_menu := $BackToMenu
 
 
 func _ready():
-	back_to_menu = $BackToMenu
 	back_to_menu.pressed.connect(back_to_main_menu)
 
 

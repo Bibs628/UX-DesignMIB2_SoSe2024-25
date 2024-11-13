@@ -1,10 +1,10 @@
 class_name MenuMain
 extends BoxContainer
 
-var start_game: MenuButton
-var load_game: MenuButton
-var settings: MenuButton
-var exit: MenuButton
+@onready var start_game := $Start
+@onready var load_game := $Load
+@onready var settings := $Settings
+@onready var exit := $Exit
 
 
 func _ready() -> void:
@@ -12,11 +12,6 @@ func _ready() -> void:
 	Loads the main menu functionality. 
 	Checks if a save exists through SaveState.
 	"""
-	start_game = $Start
-	load_game = $Load
-	settings = $Settings
-	exit = $Exit
-
 	load_game.disabled = not SaveState.save_exists()
 
 	start_game.pressed.connect(SaveState.save_game)
