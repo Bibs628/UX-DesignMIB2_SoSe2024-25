@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="ComputerParts" load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://Script/Resources/ComputerParts/CaseAccessory.gd" id="1_86ju8"]
+[ext_resource type="Script" path="res://Script/Resources/ComputerParts.gd" id="2_c5tnf"]
+
+[sub_resource type="Resource" id="Resource_dwhwk"]
+script = ExtResource("1_86ju8")
+type = "LED Controller"
+form_factor = 2.5
+name = "NZXT HUE 2 RGB Lighting Kit"
+price = 0.0
+
+[sub_resource type="Resource" id="Resource_bra5h"]
+script = ExtResource("1_86ju8")
+type = "LED Controller"
+form_factor = 2.5
+name = "NZXT Hue+"
+price = 0.0
+
+[sub_resource type="Resource" id="Resource_af0ek"]
+script = ExtResource("1_86ju8")
+type = "Card Reader"
+form_factor = 5.25
+name = "NZXT Aperture M"
+price = 0.0
+
+[sub_resource type="Resource" id="Resource_yyfp6"]
+script = ExtResource("1_86ju8")
+type = "Card Reader"
+form_factor = 3.5
+name = "Vantec UGT-CR935"
+price = 0.0
+
+[sub_resource type="Resource" id="Resource_rwg8p"]
+script = ExtResource("1_86ju8")
+type = "LED Controller"
+form_factor = 5.25
+name = "NZXT Hue"
+price = 0.0
+
+[sub_resource type="Resource" id="Resource_uooup"]
+script = ExtResource("1_86ju8")
+type = "Card Reader"
+form_factor = 5.25
+name = "nMEDIAPC ZE-C668"
+price = 0.0
+
+[sub_resource type="Resource" id="Resource_5gbor"]
+script = ExtResource("1_86ju8")
+type = "Card Reader"
+form_factor = 5.25
+name = "Unitech U3903"
+price = 0.0
+
+[sub_resource type="Resource" id="Resource_av4sn"]
+script = ExtResource("1_86ju8")
+type = "Card Reader"
+form_factor = 5.25
+name = "nMEDIAPC ZE-C288"
+price = 0.0
+
+[resource]
+script = ExtResource("2_c5tnf")
+parts = Array[Resource]([SubResource("Resource_dwhwk"), SubResource("Resource_bra5h"), SubResource("Resource_af0ek"), SubResource("Resource_yyfp6"), SubResource("Resource_rwg8p"), SubResource("Resource_uooup"), SubResource("Resource_5gbor"), SubResource("Resource_av4sn")])
