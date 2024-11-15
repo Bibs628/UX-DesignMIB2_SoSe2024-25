@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://di3sshmpigsyx"]
+
+[ext_resource type="Script" path="res://Script/ConfigSetup.gd" id="1_3m0ka"]
+
+[node name="ConfigSetup" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3m0ka")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(1080, 2400)
+layout_direction = 1
+layout_mode = 2
+
+[node name="Main" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(864, 50)
+layout_mode = 2
+
+[node name="Start" type="MenuButton" parent="Main"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+toggle_mode = false
+text = "Select your PC proficiency..."
+flat = false
+text_overrun_behavior = 2
+autowrap_mode = 2
+
+[node name="Load" type="MenuButton" parent="Main"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "First Time Builder"
+flat = false
+
+[node name="Settings" type="MenuButton" parent="Main"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Want to learn more"
+flat = false
+text_overrun_behavior = 2
+autowrap_mode = 2
+
+[node name="BackToMain" type="MenuButton" parent="Main"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Back to Menu"
+flat = false
