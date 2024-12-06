@@ -1,4 +1,15 @@
-[gd_resource type="Theme" load_steps=11 format=4 uid="uid://hr4juv1yygjn"]
+[gd_resource type="Theme" load_steps=15 format=4 uid="uid://hr4juv1yygjn"]
+
+[ext_resource type="Texture2D" uid="uid://cme62u7ya3jeq" path="res://Assets/circle.png" id="1_e6pyg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ejes7"]
+bg_color = Color(0, 0.539528, 0.539527, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ft27"]
+bg_color = Color(0, 0.539528, 0.539527, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fb6nf"]
+bg_color = Color(0, 1, 1, 1)
 
 [sub_resource type="Image" id="Image_5o301"]
 data = {
@@ -1298,14 +1309,14 @@ expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_st0s5"]
-bg_color = Color(0.670588, 0.854902, 0.988235, 1)
+bg_color = Color(0.980392, 0.411765, 0.556863, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vclq8"]
-bg_color = Color(0.470588, 0.223529, 0.788235, 1)
+bg_color = Color(0.145098, 0.560784, 0.529412, 1)
 border_color = Color(0.8, 0.8, 0.8, 0)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
@@ -1325,10 +1336,17 @@ corner_radius_bottom_left = 50
 corner_detail = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fkuq6"]
-bg_color = Color(0.0431373, 0.0705882, 0.14902, 1)
+bg_color = Color(0, 0, 0, 1)
 
 [resource]
 BoxContainer/constants/separation = 200
+HScrollBar/styles/scroll = SubResource("StyleBoxFlat_ejes7")
+HSlider/icons/grabber = ExtResource("1_e6pyg")
+HSlider/icons/grabber_disabled = null
+HSlider/icons/grabber_highlight = ExtResource("1_e6pyg")
+HSlider/icons/tick = null
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_1ft27")
+HSlider/styles/slider = SubResource("StyleBoxFlat_fb6nf")
 MenuButton/colors/font_color = Color(0.875, 0.875, 0.875, 1)
 MenuButton/colors/font_disabled_color = Color(1, 1, 1, 0.3)
 MenuButton/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
