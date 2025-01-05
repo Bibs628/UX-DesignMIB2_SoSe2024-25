@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="Persistence" load_steps=2 format=3 uid="uid://dufjage067vsa"]
-
-[ext_resource type="Script" path="res://Script/Resources/DataPersistence.gd" id="1_041bf"]
-
-[resource]
-script = ExtResource("1_041bf")
-test = "hello world"
