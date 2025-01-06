@@ -8,3 +8,5 @@ godotproject/*.import
 
 # Android Export
 godotproject/android/
+*.blend1
+*.odp
