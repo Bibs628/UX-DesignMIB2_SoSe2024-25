@@ -1,0 +1,111 @@
+[gd_resource type="Theme" load_steps=15 format=3 uid="uid://hr4juv1yygjn"]
+
+[ext_resource type="Texture2D" uid="uid://cme62u7ya3jeq" path="res://Assets/circle.png" id="1_e6pyg"]
+[ext_resource type="Texture2D" uid="uid://b117ftlqhvnka" path="res://Assets/Background.png" id="2_2eu6o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ejes7"]
+bg_color = Color(0, 0.539528, 0.539527, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ft27"]
+bg_color = Color(0, 0.539528, 0.539527, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fb6nf"]
+bg_color = Color(0, 1, 1, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_v40u3"]
+
+[sub_resource type="FontVariation" id="FontVariation_dcjlk"]
+base_font = SubResource("SystemFont_v40u3")
+
+[sub_resource type="SystemFont" id="SystemFont_vbfhf"]
+fallbacks = Array[Font]([SubResource("FontVariation_dcjlk")])
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_joevx"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_do5ah"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_st0s5"]
+bg_color = Color(0.980392, 0.411765, 0.556863, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vclq8"]
+bg_color = Color(0, 0.478431, 0.933333, 0.0980392)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.228211, 0.344539, 0.883004, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_88xpl"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+corner_detail = 5
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ssr4a"]
+texture = ExtResource("2_2eu6o")
+
+[resource]
+BoxContainer/constants/separation = 50
+HScrollBar/styles/scroll = SubResource("StyleBoxFlat_ejes7")
+HSlider/icons/grabber = ExtResource("1_e6pyg")
+HSlider/icons/grabber_disabled = null
+HSlider/icons/grabber_highlight = ExtResource("1_e6pyg")
+HSlider/icons/tick = null
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_1ft27")
+HSlider/styles/slider = SubResource("StyleBoxFlat_fb6nf")
+MenuButton/colors/font_color = Color(0.443903, 0.573972, 0.975005, 1)
+MenuButton/colors/font_disabled_color = Color(1, 1, 1, 0.3)
+MenuButton/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+MenuButton/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+MenuButton/colors/font_outline_color = Color(0, 0, 0, 1)
+MenuButton/colors/font_pressed_color = Color(1, 1, 1, 1)
+MenuButton/constants/h_separation = 4
+MenuButton/constants/outline_size = 0
+MenuButton/font_sizes/font_size = 16
+MenuButton/fonts/font = SubResource("SystemFont_vbfhf")
+MenuButton/styles/disabled = SubResource("StyleBoxFlat_joevx")
+MenuButton/styles/focus = SubResource("StyleBoxFlat_do5ah")
+MenuButton/styles/hover = SubResource("StyleBoxFlat_st0s5")
+MenuButton/styles/normal = SubResource("StyleBoxFlat_vclq8")
+MenuButton/styles/pressed = SubResource("StyleBoxFlat_88xpl")
+Panel/styles/panel = SubResource("StyleBoxTexture_ssr4a")
