@@ -7,6 +7,10 @@ extends BoxContainer
 #@onready var exit := $Exit
 
 
+func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("Tap"):
+		start_new_config()
+
 func _ready() -> void:
 	"""
 	Loads the main menu functionality. 
@@ -22,7 +26,7 @@ func _ready() -> void:
 
 func start_new_config() -> void:
 	var loading_screen = LoadingScreen.new()
-	loading_screen.target_scene = "res://Scenes/ConfigSetup.tscn"
+	loading_screen.target_scene = "res://Scenes/Welcome.tscn"
 	#get_tree().change_scene_to_packed(loading_screen)
 	get_tree().change_scene_to_file("res://Scenes/LoadingScreen.tscn")
 

@@ -12,7 +12,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource("1_37dvt")
+metadata/_edit_use_anchors_ = true
 
 [node name="BG" type="Panel" parent="."]
 custom_minimum_size = Vector2(1125, 2436)
@@ -35,6 +38,7 @@ stretch_mode = 3
 [node name="Start" type="MenuButton" parent="Main"]
 custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
+mouse_filter = 2
 theme = ExtResource("1_37dvt")
 theme_override_font_sizes/font_size = 100
 text = "Tap to Continue"
