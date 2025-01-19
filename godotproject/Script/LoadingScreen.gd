@@ -10,8 +10,6 @@ var loading_status: int
 var progress: Array[float]
 var timer_has_started: bool = false
 
-#@onready var progress_bar := $ProgressBar
-
 
 func _ready() -> void:
 	print("Loading scene ", target_scene)

@@ -16,6 +16,4 @@ func _ready() -> void:
 
 
 func start_new_config(_str: String) -> void:
-	var loading_screen = LoadingScreen.new()
-	loading_screen.target_scene = "res://Scenes/Welcome.tscn"
-	get_tree().change_scene_to_file("res://Scenes/LoadingScreen.tscn")
+	get_tree().change_scene_to_file("res://Scenes/LogIn.tscn")

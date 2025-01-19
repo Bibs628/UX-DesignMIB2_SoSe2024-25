@@ -14,7 +14,8 @@ config/name="UXDesign"
 run/main_scene="res://Scenes/Menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 run/max_fps=60
-config/icon="res://icon.svg"
+boot_splash/image="res://Assets/BC_Logo-klein-transparent.png"
+config/icon="res://Assets/BC_Logo-klein-transparent.png"
 
 [autoload]
 
