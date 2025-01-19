@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://8xni5ywa8vxf"]
+[gd_scene load_steps=3 format=3 uid="uid://8xni5ywa8vxf"]
 
 [ext_resource type="Script" path="res://Script/LoadingScreen.gd" id="1_37cuv"]
+[ext_resource type="Texture2D" uid="uid://b117ftlqhvnka" path="res://Assets/Background.png" id="2_tywjg"]
 
 [node name="LoadingScreen" type="CenterContainer"]
 anchors_preset = 15
@@ -17,3 +18,7 @@ layout_mode = 2
 [node name="ProgressBar" type="ProgressBar" parent="."]
 custom_minimum_size = Vector2(864, 400)
 layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_tywjg")
