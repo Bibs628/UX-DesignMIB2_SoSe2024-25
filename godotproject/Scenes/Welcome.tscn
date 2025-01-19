@@ -1,53 +1,54 @@
-[gd_scene load_steps=7 format=3 uid="uid://dcb26pexngndg"]
+[gd_scene load_steps=4 format=3 uid="uid://dcb26pexngndg"]
 
 [ext_resource type="Theme" uid="uid://hr4juv1yygjn" path="res://ByteCraft.tres" id="1_ltcs4"]
-[ext_resource type="FontFile" uid="uid://dy3or7vdan16i" path="res://Fonts/Abel-Regular.ttf" id="2_j4yj6"]
-[ext_resource type="StyleBox" uid="uid://bw4prfqkw3dma" path="res://CircleButton.tres" id="2_pfyav"]
 [ext_resource type="Script" path="res://Script/WelcomeScreen.gd" id="2_tv53m"]
-[ext_resource type="StyleBox" uid="uid://hcy7api4bxam" path="res://CircleButtonHover.tres" id="3_p4r5b"]
 
 [sub_resource type="SystemFont" id="SystemFont_s5soj"]
 font_names = PackedStringArray("Blackpast DEMO")
 
-[node name="Menu" type="CenterContainer"]
+[node name="Menu" type="Control"]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
 theme = ExtResource("1_ltcs4")
 script = ExtResource("2_tv53m")
-metadata/_edit_use_anchors_ = true
 
 [node name="BG" type="Panel" parent="."]
+z_index = -7
 custom_minimum_size = Vector2(1125, 2436)
 layout_direction = 1
 layout_mode = 2
+offset_right = 1125.0
+offset_bottom = 2436.0
 theme = ExtResource("1_ltcs4")
 
-[node name="Main" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(600, 0)
-layout_mode = 2
-theme = ExtResource("1_ltcs4")
-
-[node name="Logo" type="TextureRect" parent="Main"]
+[node name="Logo" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(0, 500)
 layout_mode = 2
+offset_left = 62.0
+offset_top = 343.0
+offset_right = 1062.0
+offset_bottom = 843.0
 size_flags_vertical = 4
 stretch_mode = 3
 
-[node name="Welcome" type="RichTextLabel" parent="Main"]
+[node name="Welcome" type="RichTextLabel" parent="."]
 custom_minimum_size = Vector2(1000, 200)
 layout_mode = 2
+offset_left = 62.0
+offset_top = 1022.0
+offset_right = 1062.0
+offset_bottom = 1222.0
 size_flags_vertical = 8
 theme = ExtResource("1_ltcs4")
 theme_override_font_sizes/normal_font_size = 100
 text = "Welcome,"
 fit_content = true
 
-[node name="Name" type="RichTextLabel" parent="Main/Welcome"]
+[node name="Name" type="RichTextLabel" parent="Welcome"]
 clip_contents = false
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
@@ -65,9 +66,13 @@ bbcode_enabled = true
 text = "[center]Zack"
 fit_content = true
 
-[node name="HelpPrompt" type="RichTextLabel" parent="Main"]
-custom_minimum_size = Vector2(500, 20)
+[node name="HelpPrompt" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(500, 200)
 layout_mode = 2
+offset_left = 62.0
+offset_top = 1318.0
+offset_right = 1062.0
+offset_bottom = 1518.0
 size_flags_vertical = 8
 theme = ExtResource("1_ltcs4")
 theme_override_font_sizes/normal_font_size = 75
@@ -75,48 +80,34 @@ bbcode_enabled = true
 text = "[center]How can we help you today?[/center]"
 fit_content = true
 
-[node name="NewPC" type="Button" parent="Main"]
-z_index = 5
-custom_minimum_size = Vector2(800, 250)
-layout_mode = 2
-size_flags_horizontal = 4
-mouse_filter = 2
+[node name="Main" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -366.5
+offset_top = -1492.0
+offset_right = 366.5
+offset_bottom = 258.0
+grow_horizontal = 2
+grow_vertical = 0
 theme = ExtResource("1_ltcs4")
-theme_override_fonts/font = ExtResource("2_j4yj6")
-theme_override_font_sizes/font_size = 100
-theme_override_styles/focus = ExtResource("3_p4r5b")
-theme_override_styles/disabled_mirrored = ExtResource("3_p4r5b")
-theme_override_styles/disabled = ExtResource("3_p4r5b")
-theme_override_styles/hover_pressed_mirrored = ExtResource("3_p4r5b")
-theme_override_styles/hover_pressed = ExtResource("3_p4r5b")
-theme_override_styles/hover_mirrored = ExtResource("3_p4r5b")
-theme_override_styles/hover = ExtResource("3_p4r5b")
-theme_override_styles/pressed_mirrored = ExtResource("3_p4r5b")
-theme_override_styles/pressed = ExtResource("3_p4r5b")
-theme_override_styles/normal_mirrored = ExtResource("3_p4r5b")
-theme_override_styles/normal = ExtResource("2_pfyav")
+alignment = 1
+
+[node name="NewPC" type="Button" parent="Main"]
+layout_mode = 2
+theme = ExtResource("1_ltcs4")
 text = "New PC"
 
-[node name="Continue" type="MenuButton" parent="Main"]
-custom_minimum_size = Vector2(800, 250)
+[node name="Continue" type="Button" parent="Main"]
 layout_mode = 2
-size_flags_horizontal = 4
-mouse_filter = 2
 theme = ExtResource("1_ltcs4")
-theme_type_variation = &"AlphaCircle"
-theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = ExtResource("2_pfyav")
 text = "Continue"
-flat = false
 
-[node name="Saved" type="MenuButton" parent="Main"]
-custom_minimum_size = Vector2(800, 250)
+[node name="Saveds" type="Button" parent="Main"]
 layout_mode = 2
-size_flags_horizontal = 4
-mouse_filter = 2
 theme = ExtResource("1_ltcs4")
-theme_type_variation = &"AlphaCircle"
-theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = ExtResource("2_pfyav")
 text = "Saved Projects"
-flat = false

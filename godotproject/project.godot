@@ -24,8 +24,10 @@ EventBus="*res://Script/EventBus.gd"
 
 window/size/viewport_width=1125
 window/size/viewport_height=2436
+window/size/initial_position_type=2
+window/size/window_width_override=562
+window/size/window_height_override=1218
 window/stretch/mode="viewport"
-window/stretch/aspect="keep_width"
 window/handheld/orientation=1
 
 [dotnet]
