@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dcb26pexngndg"]
+[gd_scene load_steps=7 format=3 uid="uid://dcb26pexngndg"]
 
 [ext_resource type="Theme" uid="uid://hr4juv1yygjn" path="res://ByteCraft.tres" id="1_ltcs4"]
 [ext_resource type="FontFile" uid="uid://dy3or7vdan16i" path="res://Fonts/Abel-Regular.ttf" id="2_j4yj6"]
 [ext_resource type="StyleBox" uid="uid://bw4prfqkw3dma" path="res://CircleButton.tres" id="2_pfyav"]
+[ext_resource type="Script" path="res://Script/WelcomeScreen.gd" id="2_tv53m"]
 [ext_resource type="StyleBox" uid="uid://hcy7api4bxam" path="res://CircleButtonHover.tres" id="3_p4r5b"]
 
 [sub_resource type="SystemFont" id="SystemFont_s5soj"]
@@ -17,6 +18,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("1_ltcs4")
+script = ExtResource("2_tv53m")
 metadata/_edit_use_anchors_ = true
 
 [node name="BG" type="Panel" parent="."]
@@ -73,26 +75,30 @@ bbcode_enabled = true
 text = "[center]How can we help you today?[/center]"
 fit_content = true
 
-[node name="NewPC" type="MenuButton" parent="Main"]
-custom_minimum_size = Vector2(800, 300)
+[node name="NewPC" type="Button" parent="Main"]
+z_index = 5
+custom_minimum_size = Vector2(800, 250)
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
 theme = ExtResource("1_ltcs4")
-theme_type_variation = &"AlphaCircle"
 theme_override_fonts/font = ExtResource("2_j4yj6")
 theme_override_font_sizes/font_size = 100
+theme_override_styles/focus = ExtResource("3_p4r5b")
+theme_override_styles/disabled_mirrored = ExtResource("3_p4r5b")
+theme_override_styles/disabled = ExtResource("3_p4r5b")
 theme_override_styles/hover_pressed_mirrored = ExtResource("3_p4r5b")
 theme_override_styles/hover_pressed = ExtResource("3_p4r5b")
 theme_override_styles/hover_mirrored = ExtResource("3_p4r5b")
 theme_override_styles/hover = ExtResource("3_p4r5b")
+theme_override_styles/pressed_mirrored = ExtResource("3_p4r5b")
+theme_override_styles/pressed = ExtResource("3_p4r5b")
+theme_override_styles/normal_mirrored = ExtResource("3_p4r5b")
 theme_override_styles/normal = ExtResource("2_pfyav")
-toggle_mode = false
 text = "New PC"
-flat = false
 
 [node name="Continue" type="MenuButton" parent="Main"]
-custom_minimum_size = Vector2(800, 300)
+custom_minimum_size = Vector2(800, 250)
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -104,7 +110,7 @@ text = "Continue"
 flat = false
 
 [node name="Saved" type="MenuButton" parent="Main"]
-custom_minimum_size = Vector2(800, 300)
+custom_minimum_size = Vector2(800, 250)
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
