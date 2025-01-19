@@ -1,9 +1,48 @@
-[gd_scene load_steps=3 format=3 uid="uid://8xni5ywa8vxf"]
+[gd_scene load_steps=7 format=3 uid="uid://8xni5ywa8vxf"]
 
 [ext_resource type="Script" path="res://Script/LoadingScreen.gd" id="1_37cuv"]
 [ext_resource type="Texture2D" uid="uid://b117ftlqhvnka" path="res://Assets/Background.png" id="2_tywjg"]
+[ext_resource type="Texture2D" uid="uid://bg2mdr2nlxt6b" path="res://Assets/BC_Logo-klein-transparent.png" id="3_1vv3m"]
 
-[node name="LoadingScreen" type="CenterContainer"]
+[sub_resource type="Animation" id="Animation_c7r0i"]
+resource_name = "Loading"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["Loading", "Loading.", "Loading..", "Loading..."]
+}
+
+[sub_resource type="Animation" id="Animation_pfxhv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Loading"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qcu8l"]
+_data = {
+"Loading": SubResource("Animation_c7r0i"),
+"RESET": SubResource("Animation_pfxhv")
+}
+
+[node name="LoadingScreen" type="Control"]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -12,13 +51,56 @@ grow_vertical = 2
 script = ExtResource("1_37cuv")
 
 [node name="Panel" type="Panel" parent="."]
-custom_minimum_size = Vector2(1080, 2400)
+custom_minimum_size = Vector2(1125, 2436)
 layout_mode = 2
-
-[node name="ProgressBar" type="ProgressBar" parent="."]
-custom_minimum_size = Vector2(864, 400)
-layout_mode = 2
+offset_right = 1125.0
+offset_bottom = 2436.0
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 2
+offset_right = 1125.0
+offset_bottom = 2436.0
 texture = ExtResource("2_tywjg")
+expand_mode = 1
+
+[node name="BCLogo" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(650, 650)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.0
+offset_top = -325.0
+offset_right = 325.0
+offset_bottom = 325.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_1vv3m")
+expand_mode = 2
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = 314.0
+offset_right = 325.0
+offset_bottom = 414.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 75
+text = "Loading"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qcu8l")
+}
