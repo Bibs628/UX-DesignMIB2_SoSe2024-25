@@ -1,0 +1,197 @@
+[gd_scene load_steps=12 format=3 uid="uid://dv37du4vdxaut"]
+
+[ext_resource type="Theme" uid="uid://hr4juv1yygjn" path="res://ByteCraft.tres" id="1_t1jse"]
+[ext_resource type="Texture2D" uid="uid://ysewr685bdhu" path="res://Assets/Office1.png" id="3_x1mub"]
+[ext_resource type="FontFile" uid="uid://dy3or7vdan16i" path="res://Fonts/Abel-Regular.ttf" id="3_ysc4p"]
+[ext_resource type="StyleBox" uid="uid://hcy7api4bxam" path="res://CircleButtonHover.tres" id="4_dq6qx"]
+[ext_resource type="StyleBox" uid="uid://bw4prfqkw3dma" path="res://CircleButton.tres" id="5_bky6q"]
+[ext_resource type="Texture2D" uid="uid://jm2j8n8cvunp" path="res://Assets/office2.png" id="6_yyt8q"]
+[ext_resource type="Texture2D" uid="uid://c5mkdkrp8sra2" path="res://Assets/office3.png" id="7_62s6n"]
+[ext_resource type="Texture2D" uid="uid://c0jc4pqmb52g8" path="res://Assets/PC.png" id="8_gjx2m"]
+[ext_resource type="Texture2D" uid="uid://b6gjosq341bkc" path="res://Assets/Gaming2.png" id="9_ty3kk"]
+[ext_resource type="Texture2D" uid="uid://dtjovdeo8lupf" path="res://Assets/Gaming3.png" id="10_dkcge"]
+
+[sub_resource type="GDScript" id="GDScript_tnr47"]
+script/source = "extends ScrollContainer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Menu" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+size_flags_vertical = 6
+theme = ExtResource("1_t1jse")
+metadata/_edit_use_anchors_ = true
+
+[node name="BG" type="Panel" parent="."]
+custom_minimum_size = Vector2(1125, 2436)
+layout_direction = 1
+layout_mode = 2
+theme = ExtResource("1_t1jse")
+
+[node name="Main" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme = ExtResource("1_t1jse")
+
+[node name="Logo" type="TextureRect" parent="Main"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+size_flags_vertical = 4
+stretch_mode = 3
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+
+[node name="Selection" type="RichTextLabel" parent="Control"]
+custom_minimum_size = Vector2(1000, 200)
+layout_mode = 2
+offset_left = -513.0
+offset_top = -545.0
+offset_right = 487.0
+offset_bottom = -345.0
+size_flags_vertical = 8
+theme = ExtResource("1_t1jse")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[center]GAMING 1"
+fit_content = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control"]
+layout_mode = 1
+offset_left = -399.0
+offset_top = -272.0
+offset_right = 401.0
+offset_bottom = 1128.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_tnr47")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ScrollContainer"]
+layout_mode = 2
+
+[node name="Office 1" type="MenuButton" parent="Control/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(800, 250)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("1_t1jse")
+theme_type_variation = &"AlphaCircle"
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = ExtResource("5_bky6q")
+text = "Office 1     "
+flat = false
+alignment = 2
+
+[node name="Office1" type="Sprite2D" parent="Control/ScrollContainer/VBoxContainer/Office 1"]
+position = Vector2(191, 127)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("3_x1mub")
+
+[node name="Office 2" type="Button" parent="Control/ScrollContainer/VBoxContainer"]
+z_index = 5
+custom_minimum_size = Vector2(800, 250)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("1_t1jse")
+theme_override_fonts/font = ExtResource("3_ysc4p")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/focus = ExtResource("4_dq6qx")
+theme_override_styles/disabled_mirrored = ExtResource("4_dq6qx")
+theme_override_styles/disabled = ExtResource("4_dq6qx")
+theme_override_styles/hover_pressed_mirrored = ExtResource("4_dq6qx")
+theme_override_styles/hover_pressed = ExtResource("4_dq6qx")
+theme_override_styles/hover_mirrored = ExtResource("4_dq6qx")
+theme_override_styles/hover = ExtResource("4_dq6qx")
+theme_override_styles/pressed_mirrored = ExtResource("4_dq6qx")
+theme_override_styles/pressed = ExtResource("4_dq6qx")
+theme_override_styles/normal_mirrored = ExtResource("4_dq6qx")
+theme_override_styles/normal = ExtResource("5_bky6q")
+text = "Office 2     "
+alignment = 2
+
+[node name="Office2" type="Sprite2D" parent="Control/ScrollContainer/VBoxContainer/Office 2"]
+position = Vector2(209, 123)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_yyt8q")
+
+[node name="Office 3" type="MenuButton" parent="Control/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(800, 250)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("1_t1jse")
+theme_type_variation = &"AlphaCircle"
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = ExtResource("5_bky6q")
+text = "Office 3     "
+flat = false
+alignment = 2
+
+[node name="Office3" type="Sprite2D" parent="Control/ScrollContainer/VBoxContainer/Office 3"]
+position = Vector2(205, 126)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("7_62s6n")
+
+[node name="Gaming 1" type="MenuButton" parent="Control/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(800, 250)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("1_t1jse")
+theme_type_variation = &"AlphaCircle"
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = ExtResource("5_bky6q")
+text = "Gaming 1     "
+flat = false
+alignment = 2
+
+[node name="Pc" type="Sprite2D" parent="Control/ScrollContainer/VBoxContainer/Gaming 1"]
+position = Vector2(184, 125)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_gjx2m")
+
+[node name="Gaming 2" type="MenuButton" parent="Control/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(800, 250)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("1_t1jse")
+theme_type_variation = &"AlphaCircle"
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = ExtResource("5_bky6q")
+text = "Gaming 2     "
+flat = false
+alignment = 2
+
+[node name="Gaming2" type="Sprite2D" parent="Control/ScrollContainer/VBoxContainer/Gaming 2"]
+position = Vector2(191, 120)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_ty3kk")
+
+[node name="Gaming 3" type="MenuButton" parent="Control/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(800, 250)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("1_t1jse")
+theme_type_variation = &"AlphaCircle"
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = ExtResource("5_bky6q")
+text = "Gaming 3     "
+flat = false
+alignment = 2
+
+[node name="Gaming3" type="Sprite2D" parent="Control/ScrollContainer/VBoxContainer/Gaming 3"]
+position = Vector2(181, 131)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("10_dkcge")
