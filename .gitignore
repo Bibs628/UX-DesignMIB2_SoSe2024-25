@@ -10,3 +10,4 @@ godotproject/*.import
 godotproject/android/
 *.blend1
 *.odp
+*.import

@@ -1,64 +1,64 @@
 [gd_resource type="Resource" script_class="ComputerParts" load_steps=11 format=3]
 
-[ext_resource type="Script" path="res://Script/Resources/ComputerParts/CaseAccessory.gd" id="1_yquox"]
-[ext_resource type="Script" path="res://Script/Resources/ComputerParts.gd" id="2_arel1"]
+[ext_resource type="Script" path="res://Script/Resources/ComputerParts/CaseAccessory.gd" id="1_eu1sl"]
+[ext_resource type="Script" path="res://Script/Resources/ComputerParts.gd" id="2_o3gv0"]
 
-[sub_resource type="Resource" id="Resource_6og1r"]
-script = ExtResource("1_yquox")
+[sub_resource type="Resource" id="Resource_g54sq"]
+script = ExtResource("1_eu1sl")
 type = "LED Controller"
 form_factor = 2.5
 name = "NZXT HUE 2 RGB Lighting Kit"
 price = 0.0
 
-[sub_resource type="Resource" id="Resource_ry77p"]
-script = ExtResource("1_yquox")
+[sub_resource type="Resource" id="Resource_kxk3l"]
+script = ExtResource("1_eu1sl")
 type = "LED Controller"
 form_factor = 2.5
 name = "NZXT Hue+"
 price = 0.0
 
-[sub_resource type="Resource" id="Resource_iucre"]
-script = ExtResource("1_yquox")
+[sub_resource type="Resource" id="Resource_3sv84"]
+script = ExtResource("1_eu1sl")
 type = "Card Reader"
 form_factor = 5.25
 name = "NZXT Aperture M"
 price = 0.0
 
-[sub_resource type="Resource" id="Resource_nubu2"]
-script = ExtResource("1_yquox")
+[sub_resource type="Resource" id="Resource_val7y"]
+script = ExtResource("1_eu1sl")
 type = "Card Reader"
 form_factor = 3.5
 name = "Vantec UGT-CR935"
 price = 0.0
 
-[sub_resource type="Resource" id="Resource_6m518"]
-script = ExtResource("1_yquox")
+[sub_resource type="Resource" id="Resource_fvdae"]
+script = ExtResource("1_eu1sl")
 type = "LED Controller"
 form_factor = 5.25
 name = "NZXT Hue"
 price = 0.0
 
-[sub_resource type="Resource" id="Resource_x687i"]
-script = ExtResource("1_yquox")
+[sub_resource type="Resource" id="Resource_xtaqx"]
+script = ExtResource("1_eu1sl")
 type = "Card Reader"
 form_factor = 5.25
 name = "nMEDIAPC ZE-C668"
 price = 0.0
 
-[sub_resource type="Resource" id="Resource_jmhhd"]
-script = ExtResource("1_yquox")
+[sub_resource type="Resource" id="Resource_hjs7p"]
+script = ExtResource("1_eu1sl")
 type = "Card Reader"
 form_factor = 5.25
 name = "Unitech U3903"
 price = 0.0
 
-[sub_resource type="Resource" id="Resource_y61jy"]
-script = ExtResource("1_yquox")
+[sub_resource type="Resource" id="Resource_afe4s"]
+script = ExtResource("1_eu1sl")
 type = "Card Reader"
 form_factor = 5.25
 name = "nMEDIAPC ZE-C288"
 price = 0.0
 
 [resource]
-script = ExtResource("2_arel1")
-parts = Array[Resource]([SubResource("Resource_6og1r"), SubResource("Resource_ry77p"), SubResource("Resource_iucre"), SubResource("Resource_nubu2"), SubResource("Resource_6m518"), SubResource("Resource_x687i"), SubResource("Resource_jmhhd"), SubResource("Resource_y61jy")])
+script = ExtResource("2_o3gv0")
+parts = Array[Resource]([SubResource("Resource_g54sq"), SubResource("Resource_kxk3l"), SubResource("Resource_3sv84"), SubResource("Resource_val7y"), SubResource("Resource_fvdae"), SubResource("Resource_xtaqx"), SubResource("Resource_hjs7p"), SubResource("Resource_afe4s")])
