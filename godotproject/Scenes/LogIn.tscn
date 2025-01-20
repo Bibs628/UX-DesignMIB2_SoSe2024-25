@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://ch27k368q3nfc"]
+[gd_scene load_steps=9 format=3 uid="uid://ch27k368q3nfc"]
 
 [ext_resource type="Script" path="res://Script/LogIn.gd" id="1_krvmv"]
 [ext_resource type="Theme" uid="uid://hr4juv1yygjn" path="res://ByteCraft.tres" id="1_soe3g"]
 [ext_resource type="StyleBox" uid="uid://bepk585hraffg" path="res://ButtonCubePressed.tres" id="3_b632r"]
 [ext_resource type="StyleBox" uid="uid://rhvkbeslqi3k" path="res://ButtonCube.tres" id="3_kft5w"]
+[ext_resource type="AudioStream" uid="uid://cyuw0wn85wa1r" path="res://Assets/Sounds/WAGFX_Notification_48.wav" id="5_1gcdf"]
+[ext_resource type="AudioStream" uid="uid://ch1tixa4venqb" path="res://Assets/Sounds/WAGFX_Button_61.wav" id="6_w2se2"]
+[ext_resource type="AudioStream" uid="uid://b531gqm183tdm" path="res://Assets/Sounds/WARTFX_Mechanic_22.wav" id="7_xp6pn"]
+[ext_resource type="Texture2D" uid="uid://cpvo6wt4tph60" path="res://Assets/Login_Linie.png" id="8_2b85q"]
 
 [node name="LogIn" type="Control"]
 layout_mode = 3
@@ -13,6 +17,23 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_krvmv")
+metadata/_edit_horizontal_guides_ = [1268.0, 1406.0, 1406.0, 1406.0, 1267.0, 1337.0, 1410.0, 1552.0, 1410.0, 1479.0]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -564.5
+offset_top = 45.9999
+offset_right = 3548.5
+offset_bottom = 1108.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.275, 0.275)
+texture = ExtResource("8_2b85q")
 
 [node name="BG" type="Panel" parent="."]
 z_index = -7
@@ -47,36 +68,26 @@ bbcode_enabled = true
 text = "[center]Login[/center]"
 fit_content = true
 
-[node name="Main" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(600, 0)
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -366.5
-offset_top = -1492.0
-offset_right = 366.5
-offset_bottom = -606.0
-grow_horizontal = 2
-grow_vertical = 0
-theme = ExtResource("1_soe3g")
-theme_override_constants/separation = 0
-alignment = 1
-
-[node name="EMail" type="TextEdit" parent="Main"]
+[node name="EMail" type="TextEdit" parent="."]
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
+offset_left = 332.0
+offset_top = 1274.0
+offset_right = 782.0
+offset_bottom = 1374.0
 theme = ExtResource("1_soe3g")
 placeholder_text = "E-Mail"
 context_menu_enabled = false
 middle_mouse_paste_enabled = false
 structured_text_bidi_override = 3
 
-[node name="Password" type="TextEdit" parent="Main"]
+[node name="Password" type="TextEdit" parent="."]
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
+offset_left = 332.0
+offset_top = 1416.0
+offset_right = 782.0
+offset_bottom = 1516.0
 theme = ExtResource("1_soe3g")
 placeholder_text = "Password"
 context_menu_enabled = false
@@ -135,3 +146,13 @@ theme_override_styles/hover_pressed = ExtResource("3_b632r")
 theme_override_styles/pressed = ExtResource("3_b632r")
 theme_override_styles/normal = ExtResource("3_kft5w")
 toggle_mode = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_1gcdf")
+volume_db = -6.0
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_w2se2")
+
+[node name="TickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_xp6pn")

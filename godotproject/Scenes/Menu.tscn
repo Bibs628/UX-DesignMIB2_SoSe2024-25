@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Script/MenuMain.gd" id="2_3j52p"]
 [ext_resource type="Texture2D" uid="uid://c0jc4pqmb52g8" path="res://Assets/PC.png" id="2_y8sha"]
 [ext_resource type="Texture2D" uid="uid://b3fronnba6jse" path="res://Assets/Logo_weiss.png" id="4_rygkk"]
-[ext_resource type="AudioStream" uid="uid://dcwv8aqk8e6lw" path="res://Assets/Sounds/WAFBS_FX_04_Impact.wav" id="5_elrvb"]
+[ext_resource type="AudioStream" uid="uid://cly2q4nbliwbw" path="res://Assets/Sounds/WARTFX_PowerUp_16.wav" id="5_6yqon"]
 
 [sub_resource type="Animation" id="Animation_fr6io"]
 resource_name = "IntroTap"
@@ -251,4 +251,4 @@ libraries = {
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_elrvb")
+stream = ExtResource("5_6yqon")
