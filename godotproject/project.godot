@@ -14,7 +14,8 @@ config/name="UXDesign"
 run/main_scene="res://Scenes/Menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 run/max_fps=60
-config/icon="res://icon.svg"
+boot_splash/image="res://Assets/BC_Logo-klein-transparent.png"
+config/icon="res://Assets/BC_Logo-klein-transparent.png"
 
 [autoload]
 
@@ -24,8 +25,10 @@ EventBus="*res://Script/EventBus.gd"
 
 window/size/viewport_width=1125
 window/size/viewport_height=2436
-window/stretch/mode="canvas_items"
-window/stretch/aspect="keep_width"
+window/size/initial_position_type=2
+window/size/window_width_override=562
+window/size/window_height_override=1218
+window/stretch/mode="viewport"
 window/handheld/orientation=1
 
 [dotnet]
@@ -56,6 +59,5 @@ rendering_device/fallback_to_vulkan=false
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
-anti_aliasing/quality/msaa_2d=3
 anti_aliasing/quality/msaa_3d=3
 anti_aliasing/quality/screen_space_aa=1
