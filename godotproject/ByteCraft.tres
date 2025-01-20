@@ -169,6 +169,7 @@ Button/font_sizes/font_size = 100
 Button/fonts/font = ExtResource("1_k47kb")
 Button/styles/disabled = SubResource("StyleBoxFlat_e0tm7")
 Button/styles/hover = ExtResource("3_2chdo")
+Button/styles/hover_pressed = ExtResource("3_2chdo")
 Button/styles/normal = SubResource("StyleBoxFlat_1y7me")
 HScrollBar/styles/scroll = SubResource("StyleBoxFlat_ejes7")
 HSlider/icons/grabber = ExtResource("1_e6pyg")
