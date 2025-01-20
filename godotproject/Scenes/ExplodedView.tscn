@@ -2,15 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://b117ftlqhvnka" path="res://Assets/Background.png" id="1_jbx8m"]
 [ext_resource type="Script" path="res://Script/ExplodedView.gd" id="1_yajdx"]
-[ext_resource type="AudioStream" uid="uid://cly2q4nbliwbw" path="res://Assets/Sounds/WARTFX_PowerUp_16.wav" id="2_0hkm8"]
+[ext_resource type="AudioStream" uid="uid://d4ef3c23x4rnr" path="res://Assets/Sounds/WARTFX_PowerUp_16.wav" id="2_0hkm8"]
 [ext_resource type="Theme" uid="uid://hr4juv1yygjn" path="res://ByteCraft.tres" id="3_ctsfx"]
 [ext_resource type="FontFile" uid="uid://dy3or7vdan16i" path="res://Fonts/Abel-Regular.ttf" id="4_gnaxs"]
-[ext_resource type="Texture2D" uid="uid://ce74rtfrpenp5" path="res://Assets/CPU Kühler.png" id="5_70g7s"]
-[ext_resource type="Texture2D" uid="uid://bcgd8se00oyx5" path="res://Assets/RAM.png" id="5_aeolm"]
-[ext_resource type="Texture2D" uid="uid://bqq6txko423k5" path="res://Assets/Gehäuse.png" id="5_msxhg"]
-[ext_resource type="Texture2D" uid="uid://cnt3g1ytmipmx" path="res://Assets/CPU.png" id="6_3mb5a"]
-[ext_resource type="Texture2D" uid="uid://btlpdusk5icqu" path="res://Assets/GPU.png" id="8_2288k"]
-[ext_resource type="Texture2D" uid="uid://dxrkj06l31oea" path="res://Assets/MoBo.png" id="10_togtf"]
+[ext_resource type="Texture2D" uid="uid://cyej6klqmh0hn" path="res://Assets/CPU Kühler.png" id="5_70g7s"]
+[ext_resource type="Texture2D" uid="uid://c2ano7axht4y1" path="res://Assets/RAM.png" id="5_aeolm"]
+[ext_resource type="Texture2D" uid="uid://ck7lv87g18otm" path="res://Assets/Gehäuse.png" id="5_msxhg"]
+[ext_resource type="Texture2D" uid="uid://db73pqcpe0w27" path="res://Assets/CPU.png" id="6_3mb5a"]
+[ext_resource type="Texture2D" uid="uid://cp63wb5iytwao" path="res://Assets/GPU.png" id="8_2288k"]
+[ext_resource type="Texture2D" uid="uid://bqh7esiore646" path="res://Assets/MoBo.png" id="10_togtf"]
 
 [sub_resource type="Animation" id="Animation_jxlmg"]
 resource_name = "Explode"
