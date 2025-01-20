@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=19 format=3 uid="uid://hr4juv1yygjn"]
+[gd_resource type="Theme" load_steps=16 format=3 uid="uid://hr4juv1yygjn"]
 
 [ext_resource type="Texture2D" uid="uid://cme62u7ya3jeq" path="res://Assets/circle.png" id="1_e6pyg"]
 [ext_resource type="FontFile" uid="uid://dy3or7vdan16i" path="res://Fonts/Abel-Regular.ttf" id="1_k47kb"]
@@ -45,15 +45,6 @@ bg_color = Color(0, 0.539528, 0.539527, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fb6nf"]
 bg_color = Color(0, 1, 1, 1)
-
-[sub_resource type="SystemFont" id="SystemFont_v40u3"]
-
-[sub_resource type="FontVariation" id="FontVariation_dcjlk"]
-base_font = SubResource("SystemFont_v40u3")
-
-[sub_resource type="SystemFont" id="SystemFont_vbfhf"]
-fallbacks = Array[Font]([SubResource("FontVariation_dcjlk")])
-font_names = PackedStringArray("Noto Sans Test", "Blackpast DEMO")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ac8ok"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -161,6 +152,11 @@ cache/0/85/0/descent = 0.0
 cache/0/85/0/underline_position = 0.0
 cache/0/85/0/underline_thickness = 0.0
 cache/0/85/0/scale = 1.0
+cache/0/45/0/ascent = 0.0
+cache/0/45/0/descent = 0.0
+cache/0/45/0/underline_position = 0.0
+cache/0/45/0/underline_thickness = 0.0
+cache/0/45/0/scale = 1.0
 
 [resource]
 default_font = SubResource("FontFile_i8tcq")
@@ -187,7 +183,7 @@ MenuButton/colors/font_pressed_color = Color(1, 1, 1, 1)
 MenuButton/constants/h_separation = 4
 MenuButton/constants/outline_size = 0
 MenuButton/font_sizes/font_size = 16
-MenuButton/fonts/font = SubResource("SystemFont_vbfhf")
+MenuButton/fonts/font = ExtResource("1_k47kb")
 MenuButton/styles/disabled = ExtResource("2_ej1wx")
 MenuButton/styles/focus = ExtResource("3_2chdo")
 MenuButton/styles/hover = ExtResource("3_2chdo")
