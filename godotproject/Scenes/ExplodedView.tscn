@@ -1,0 +1,99 @@
+[gd_scene load_steps=5 format=3 uid="uid://cuueiaotn1x6c"]
+
+[ext_resource type="Texture2D" uid="uid://b117ftlqhvnka" path="res://Assets/Background.png" id="1_jbx8m"]
+[ext_resource type="Texture2D" uid="uid://bvl4lju01vsni" path="res://Assets/Folie_7.png" id="2_6a3ck"]
+[ext_resource type="Theme" uid="uid://hr4juv1yygjn" path="res://ByteCraft.tres" id="3_ctsfx"]
+[ext_resource type="FontFile" uid="uid://dy3or7vdan16i" path="res://Fonts/Abel-Regular.ttf" id="4_gnaxs"]
+
+[node name="ExplodedView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_horizontal_guides_ = [984.0, 318.0, 1030.0, 1084.0, 1280.0, 1399.0, 1466.0, 1626.0]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1125.0
+offset_bottom = 2436.0
+texture = ExtResource("1_jbx8m")
+expand_mode = 1
+
+[node name="Ref" type="TextureRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.196078)
+layout_mode = 0
+offset_right = 1172.0
+offset_bottom = 2538.0
+scale = Vector2(0.96, 0.96)
+texture = ExtResource("2_6a3ck")
+expand_mode = 1
+
+[node name="FractalDesign" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 685.0
+offset_top = 569.0
+offset_right = 1050.0
+offset_bottom = 759.0
+theme = ExtResource("3_ctsfx")
+theme_override_fonts/normal_font = ExtResource("4_gnaxs")
+theme_override_font_sizes/normal_font_size = 65
+text = "Fractal Design
+Vertical"
+
+[node name="AMDRyzen" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 609.0
+offset_top = 1012.0
+offset_right = 1123.0
+offset_bottom = 1080.0
+theme = ExtResource("3_ctsfx")
+theme_override_fonts/normal_font = ExtResource("4_gnaxs")
+theme_override_font_sizes/normal_font_size = 65
+text = "AMD Ryzen 3600"
+
+[node name="AMDRX" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 582.0
+offset_top = 1286.0
+offset_right = 1096.0
+offset_bottom = 1354.0
+theme = ExtResource("3_ctsfx")
+theme_override_fonts/normal_font = ExtResource("4_gnaxs")
+theme_override_font_sizes/normal_font_size = 65
+text = "AMD RX 580 8 GB"
+
+[node name="DDR432GB" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 429.0
+offset_top = 1525.0
+offset_right = 1066.0
+offset_bottom = 1593.0
+theme = ExtResource("3_ctsfx")
+theme_override_fonts/normal_font = ExtResource("4_gnaxs")
+theme_override_font_sizes/normal_font_size = 65
+text = "DDR4 32 GB 3600 MHz"
+
+[node name="DDR432GB2" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 541.0
+offset_top = 1879.0
+offset_right = 926.0
+offset_bottom = 1947.0
+theme = ExtResource("3_ctsfx")
+theme_override_fonts/normal_font = ExtResource("4_gnaxs")
+theme_override_font_sizes/normal_font_size = 65
+text = "Noctua NHD-15"
+
+[node name="DDR432GB3" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 530.0
+offset_top = 2176.0
+offset_right = 1034.0
+offset_bottom = 2244.0
+theme = ExtResource("3_ctsfx")
+theme_override_fonts/normal_font = ExtResource("4_gnaxs")
+theme_override_font_sizes/normal_font_size = 65
+text = "B450 Pro Carbon AC"
