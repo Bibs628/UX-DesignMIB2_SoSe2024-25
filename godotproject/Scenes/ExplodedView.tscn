@@ -1,9 +1,197 @@
-[gd_scene load_steps=5 format=3 uid="uid://cuueiaotn1x6c"]
+[gd_scene load_steps=15 format=3 uid="uid://cuueiaotn1x6c"]
 
 [ext_resource type="Texture2D" uid="uid://b117ftlqhvnka" path="res://Assets/Background.png" id="1_jbx8m"]
-[ext_resource type="Texture2D" uid="uid://bvl4lju01vsni" path="res://Assets/Folie_7.png" id="2_6a3ck"]
+[ext_resource type="Script" path="res://Script/ExplodedView.gd" id="1_yajdx"]
+[ext_resource type="AudioStream" uid="uid://cly2q4nbliwbw" path="res://Assets/Sounds/WARTFX_PowerUp_16.wav" id="2_0hkm8"]
 [ext_resource type="Theme" uid="uid://hr4juv1yygjn" path="res://ByteCraft.tres" id="3_ctsfx"]
 [ext_resource type="FontFile" uid="uid://dy3or7vdan16i" path="res://Fonts/Abel-Regular.ttf" id="4_gnaxs"]
+[ext_resource type="Texture2D" uid="uid://ce74rtfrpenp5" path="res://Assets/CPU Kühler.png" id="5_70g7s"]
+[ext_resource type="Texture2D" uid="uid://bcgd8se00oyx5" path="res://Assets/RAM.png" id="5_aeolm"]
+[ext_resource type="Texture2D" uid="uid://bqq6txko423k5" path="res://Assets/Gehäuse.png" id="5_msxhg"]
+[ext_resource type="Texture2D" uid="uid://cnt3g1ytmipmx" path="res://Assets/CPU.png" id="6_3mb5a"]
+[ext_resource type="Texture2D" uid="uid://btlpdusk5icqu" path="res://Assets/GPU.png" id="8_2288k"]
+[ext_resource type="Texture2D" uid="uid://dxrkj06l31oea" path="res://Assets/MoBo.png" id="10_togtf"]
+
+[sub_resource type="Animation" id="Animation_jxlmg"]
+resource_name = "Explode"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Exploders/Case:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-39, 228)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Exploders/MB:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 0.5),
+"update": 0,
+"values": [Vector2(49, 580), Vector2(49, 2085)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Exploders/GPU:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(150, 750), Vector2(150, 1248)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Exploders/RAM:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 0.5),
+"update": 0,
+"values": [Vector2(244.56, 635), Vector2(244.56, 1432.28)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Exploders/CPU:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 0.5),
+"update": 0,
+"values": [Vector2(181, 597), Vector2(181, 1014)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Exploders/Cooler:position")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 0.5),
+"update": 0,
+"values": [Vector2(244, 600), Vector2(244, 1814)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Text:modulate")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(2, 0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_w8y0l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Exploders/Case:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-39, 228)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Exploders/MB:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(49, 2085)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Exploders/GPU:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(150, 1248)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Exploders/RAM:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(244.56, 1432.28)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Exploders/CPU:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(181, 1014)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Exploders/Cooler:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(244, 1814)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Text:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xl0s8"]
+_data = {
+"Explode": SubResource("Animation_jxlmg"),
+"RESET": SubResource("Animation_w8y0l")
+}
 
 [node name="ExplodedView" type="Control"]
 layout_mode = 3
@@ -12,26 +200,26 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_yajdx")
 metadata/_edit_horizontal_guides_ = [984.0, 318.0, 1030.0, 1084.0, 1280.0, 1399.0, 1466.0, 1626.0]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_0hkm8")
+pitch_scale = 0.62
+
+[node name="BG" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 1125.0
 offset_bottom = 2436.0
 texture = ExtResource("1_jbx8m")
 expand_mode = 1
 
-[node name="Ref" type="TextureRect" parent="."]
-visible = false
-modulate = Color(1, 1, 1, 0.196078)
-layout_mode = 0
-offset_right = 1172.0
-offset_bottom = 2538.0
-scale = Vector2(0.96, 0.96)
-texture = ExtResource("2_6a3ck")
-expand_mode = 1
+[node name="Text" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="FractalDesign" type="RichTextLabel" parent="."]
+[node name="FractalDesign" type="RichTextLabel" parent="Text"]
 layout_mode = 0
 offset_left = 685.0
 offset_top = 569.0
@@ -43,7 +231,7 @@ theme_override_font_sizes/normal_font_size = 65
 text = "Fractal Design
 Vertical"
 
-[node name="AMDRyzen" type="RichTextLabel" parent="."]
+[node name="AMDRyzen" type="RichTextLabel" parent="Text"]
 layout_mode = 0
 offset_left = 609.0
 offset_top = 1012.0
@@ -54,7 +242,7 @@ theme_override_fonts/normal_font = ExtResource("4_gnaxs")
 theme_override_font_sizes/normal_font_size = 65
 text = "AMD Ryzen 3600"
 
-[node name="AMDRX" type="RichTextLabel" parent="."]
+[node name="AMDRX" type="RichTextLabel" parent="Text"]
 layout_mode = 0
 offset_left = 582.0
 offset_top = 1286.0
@@ -65,7 +253,7 @@ theme_override_fonts/normal_font = ExtResource("4_gnaxs")
 theme_override_font_sizes/normal_font_size = 65
 text = "AMD RX 580 8 GB"
 
-[node name="DDR432GB" type="RichTextLabel" parent="."]
+[node name="DDR432GB" type="RichTextLabel" parent="Text"]
 layout_mode = 0
 offset_left = 429.0
 offset_top = 1525.0
@@ -76,7 +264,7 @@ theme_override_fonts/normal_font = ExtResource("4_gnaxs")
 theme_override_font_sizes/normal_font_size = 65
 text = "DDR4 32 GB 3600 MHz"
 
-[node name="DDR432GB2" type="RichTextLabel" parent="."]
+[node name="DDR432GB2" type="RichTextLabel" parent="Text"]
 layout_mode = 0
 offset_left = 541.0
 offset_top = 1879.0
@@ -87,7 +275,7 @@ theme_override_fonts/normal_font = ExtResource("4_gnaxs")
 theme_override_font_sizes/normal_font_size = 65
 text = "Noctua NHD-15"
 
-[node name="DDR432GB3" type="RichTextLabel" parent="."]
+[node name="DDR432GB3" type="RichTextLabel" parent="Text"]
 layout_mode = 0
 offset_left = 530.0
 offset_top = 2176.0
@@ -97,3 +285,67 @@ theme = ExtResource("3_ctsfx")
 theme_override_fonts/normal_font = ExtResource("4_gnaxs")
 theme_override_font_sizes/normal_font_size = 65
 text = "B450 Pro Carbon AC"
+
+[node name="Exploders" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Case" type="TextureRect" parent="Exploders"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 228.0
+offset_right = 635.0
+offset_bottom = 1023.0
+texture = ExtResource("5_msxhg")
+expand_mode = 1
+
+[node name="GPU" type="TextureRect" parent="Exploders"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 1247.99
+offset_right = 462.0
+offset_bottom = 1430.99
+texture = ExtResource("8_2288k")
+expand_mode = 1
+
+[node name="MB" type="TextureRect" parent="Exploders"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 2085.0
+offset_right = 554.0
+offset_bottom = 2354.0
+texture = ExtResource("10_togtf")
+expand_mode = 1
+
+[node name="Cooler" type="TextureRect" parent="Exploders"]
+layout_mode = 0
+offset_left = 244.0
+offset_top = 1814.0
+offset_right = 457.0
+offset_bottom = 2012.0
+texture = ExtResource("5_70g7s")
+expand_mode = 1
+
+[node name="CPU" type="TextureRect" parent="Exploders"]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 1014.0
+offset_right = 407.0
+offset_bottom = 1145.0
+texture = ExtResource("6_3mb5a")
+expand_mode = 1
+
+[node name="RAM" type="TextureRect" parent="Exploders"]
+layout_mode = 0
+offset_left = 244.56
+offset_top = 1432.28
+offset_right = 365.56
+offset_bottom = 1656.28
+texture = ExtResource("5_aeolm")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xl0s8")
+}
