@@ -1,3 +1,6 @@
+
+#prebuild Configuration
+
 extends Control
 
 @onready var scroll_container: ScrollContainer = %ScrollContainer
@@ -8,17 +11,20 @@ var targetScroll = 0
 var prevSelec 
 
 func _ready() -> void:
+	$TextureRect/BackButton.pressed.connect(back)
+	$ChangeButton.pressed.connect(change)
 	_set_selection()
 	
+
 func _set_selection():
 	await get_tree().create_timer(0.01).timeout
 	_select_deselect_highlight()
 
 func _on_prev_pressed() -> void:
 	var scrollValue = targetScroll - _get_space_between()
-	if scrollValue < 0 : scrollValue = _get_space_between() * 4
+	if scrollValue < 0 : scrollValue = _get_space_between() * 5
 	
-	if scrollValue <= 0  : scrollValue = _get_space_between() * 5
+	if scrollValue <= 0  : scrollValue = _get_space_between() * 6
 	
 	await _tween_scroll(scrollValue)
 	
@@ -26,9 +32,9 @@ func _on_prev_pressed() -> void:
 
 func _on_next_pressed() -> void:
 	var scrollValue = targetScroll + _get_space_between()
-	if scrollValue > _get_space_between() * 4: scrollValue = 0
+	if scrollValue > _get_space_between() * 5: scrollValue = 0
 	
-	if scrollValue >=  _get_space_between() * 5 : scrollValue = 0
+	if scrollValue >=  _get_space_between() * 6 : scrollValue = 0
 	
 	await _tween_scroll(scrollValue)
 	
@@ -70,3 +76,11 @@ func get_selected_value():
 		if object.get_global_rect().has_point(selectedPosition):
 			return object
 	
+
+func back():
+	print("back")
+	get_tree().change_scene_to_file("res://Scenes/PrebuildSelection.tscn")
+	
+func change():
+	print("change")
+	get_tree().change_scene_to_file("res://Scenes/ChangePart.tscn")

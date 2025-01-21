@@ -1,14 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://cr7r085gvdhxs"]
+[gd_scene load_steps=15 format=3 uid="uid://dx6xqwrheed57"]
 
-[ext_resource type="Theme" uid="uid://hr4juv1yygjn" path="res://ByteCraft.tres" id="1_ljk7d"]
-[ext_resource type="Script" path="res://Scenes/prebuild_config.gd" id="2_j727r"]
-[ext_resource type="Texture2D" uid="uid://clma2m31m654s" path="res://Assets/arrow.png" id="3_nswn0"]
-[ext_resource type="Texture2D" uid="uid://dxofrov6xubfs" path="res://Assets/BuilderParts/cpu.webp" id="4_o5t6e"]
-[ext_resource type="Texture2D" uid="uid://bxnj0rruirusg" path="res://Assets/BuilderParts/gpu.png" id="5_neoiq"]
-[ext_resource type="Texture2D" uid="uid://b7njyxcyvtqeh" path="res://Assets/BuilderParts/ram.webp" id="6_uuisy"]
-[ext_resource type="Texture2D" uid="uid://8x6rk51l85pp" path="res://Assets/BuilderParts/ssd.png" id="7_unuwq"]
-[ext_resource type="Texture2D" uid="uid://b5i5fxas1orth" path="res://Assets/BuilderParts/mobo.png" id="8_6j715"]
-[ext_resource type="StyleBox" uid="uid://bw4prfqkw3dma" path="res://CircleButton.tres" id="9_4lkfc"]
+[ext_resource type="Theme" uid="uid://hr4juv1yygjn" path="res://ByteCraft.tres" id="1_bxtrm"]
+[ext_resource type="Script" path="res://Scenes/change_part.gd" id="2_5wo2d"]
+[ext_resource type="Texture2D" uid="uid://clma2m31m654s" path="res://Assets/arrow.png" id="3_cjxsl"]
+[ext_resource type="Texture2D" uid="uid://cie7u8mfefn78" path="res://Assets/info.png" id="4_ll3l2"]
+[ext_resource type="Texture2D" uid="uid://cfdftoeo2iutx" path="res://Assets/search.png" id="5_bp6d2"]
+[ext_resource type="Texture2D" uid="uid://b8sxtwrnqqhe" path="res://Assets/BuilderParts/RAM/xpower.png" id="6_5m646"]
+[ext_resource type="Texture2D" uid="uid://b1lptp6edsbpd" path="res://Assets/BuilderParts/RAM/corsairLPX.png" id="7_66gn1"]
+[ext_resource type="Texture2D" uid="uid://dagouvjjho13q" path="res://Assets/BuilderParts/RAM/g.skill32.webp" id="8_inr4s"]
+[ext_resource type="StyleBox" uid="uid://bw4prfqkw3dma" path="res://CircleButton.tres" id="9_lwyaj"]
+[ext_resource type="Texture2D" uid="uid://bhb3uus6vd0yu" path="res://Assets/BuilderParts/RAM/gskill16.png" id="9_yxqt4"]
+[ext_resource type="Texture2D" uid="uid://kdhv0bmckjdl" path="res://Assets/BuilderParts/RAM/corsairRGB.webp" id="10_g2l56"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eu316"]
 font_size = 75
@@ -16,7 +18,7 @@ font_size = 75
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vbtvx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_75npw"]
-font_size = 62
+font_size = 55
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -29,8 +31,8 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 2
 size_flags_vertical = 6
-theme = ExtResource("1_ljk7d")
-script = ExtResource("2_j727r")
+theme = ExtResource("1_bxtrm")
+script = ExtResource("2_5wo2d")
 metadata/_edit_use_anchors_ = true
 
 [node name="BG" type="Panel" parent="."]
@@ -39,7 +41,7 @@ layout_direction = 1
 layout_mode = 2
 offset_right = 1125.0
 offset_bottom = 2436.0
-theme = ExtResource("1_ljk7d")
+theme = ExtResource("1_bxtrm")
 
 [node name="Selection" type="Label" parent="."]
 custom_minimum_size = Vector2(1000, 200)
@@ -49,21 +51,10 @@ offset_top = 673.0
 offset_right = 1049.0
 offset_bottom = 873.0
 size_flags_vertical = 8
-theme = ExtResource("1_ljk7d")
+theme = ExtResource("1_bxtrm")
 label_settings = SubResource("LabelSettings_eu316")
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="ChangeButton" type="Button" parent="."]
-layout_mode = 2
-offset_left = 708.0
-offset_top = 2275.0
-offset_right = 1099.0
-offset_bottom = 2423.0
-size_flags_horizontal = 10
-size_flags_vertical = 10
-size_flags_stretch_ratio = 0.0
-text = "  Change  "
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -71,7 +62,7 @@ offset_left = 15.0
 offset_top = 20.0
 offset_right = 95.0
 offset_bottom = 100.0
-texture = ExtResource("3_nswn0")
+texture = ExtResource("3_cjxsl")
 
 [node name="BackButton" type="Button" parent="TextureRect"]
 self_modulate = Color(1, 1, 1, 0)
@@ -82,60 +73,87 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 965.0
+offset_top = 983.0
+offset_right = 1045.0
+offset_bottom = 1063.0
+texture = ExtResource("4_ll3l2")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 989.0
+offset_right = 128.0
+offset_bottom = 1069.0
+texture = ExtResource("5_bp6d2")
+
 [node name="Pics" type="Control" parent="."]
 unique_name_in_owner = true
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="CPU" type="TextureRect" parent="Pics"]
+[node name="XPower" type="TextureRect" parent="Pics"]
 visible = false
 layout_mode = 2
-offset_left = 302.0
-offset_top = 432.0
-offset_right = 602.0
-offset_bottom = 731.0
-scale = Vector2(1.66098, 1.64703)
-texture = ExtResource("4_o5t6e")
-
-[node name="GPU" type="TextureRect" parent="Pics"]
-visible = false
-layout_mode = 2
-offset_left = 66.0
-offset_top = 313.0
-offset_right = 1266.0
-offset_bottom = 1313.0
-scale = Vector2(0.811469, 0.811268)
-texture = ExtResource("5_neoiq")
-
-[node name="RAM" type="TextureRect" parent="Pics"]
-visible = false
-layout_mode = 0
-offset_left = -5.0
-offset_top = 383.0
-offset_right = 1095.0
-offset_bottom = 973.0
-texture = ExtResource("6_uuisy")
-
-[node name="SSD" type="TextureRect" parent="Pics"]
-visible = false
-layout_mode = 0
-offset_left = 182.0
-offset_top = 379.0
-offset_right = 682.0
-offset_bottom = 879.0
-scale = Vector2(1.51351, 1.3788)
-texture = ExtResource("7_unuwq")
-
-[node name="MOBO" type="TextureRect" parent="Pics"]
-visible = false
-layout_mode = 0
-offset_left = 287.0
+offset_left = 200.0
 offset_top = 222.0
-offset_right = 927.0
-offset_bottom = 1187.0
-scale = Vector2(0.89949, 0.912237)
-texture = ExtResource("8_6j715")
+offset_right = 1100.0
+offset_bottom = 1122.0
+scale = Vector2(0.829224, 0.827927)
+texture = ExtResource("6_5m646")
+
+[node name="Corsair" type="TextureRect" parent="Pics"]
+visible = false
+layout_mode = 2
+offset_left = 138.0
+offset_top = 241.0
+offset_right = 1338.0
+offset_bottom = 1241.0
+scale = Vector2(0.689751, 0.691241)
+texture = ExtResource("7_66gn1")
+
+[node name="G_Skill 1" type="TextureRect" parent="Pics"]
+visible = false
+layout_mode = 0
+offset_left = 115.0
+offset_top = 353.0
+offset_right = 1215.0
+offset_bottom = 943.0
+scale = Vector2(0.796536, 0.792748)
+texture = ExtResource("8_inr4s")
+
+[node name="G_Skill 2" type="TextureRect" parent="Pics"]
+visible = false
+layout_mode = 0
+offset_left = 110.0
+offset_top = 373.0
+offset_right = 1210.0
+offset_bottom = 963.0
+scale = Vector2(0.802295, 0.70556)
+texture = ExtResource("9_yxqt4")
+
+[node name="Corsair2" type="TextureRect" parent="Pics"]
+visible = false
+layout_mode = 0
+offset_left = 143.0
+offset_top = 156.0
+offset_right = 1143.0
+offset_bottom = 1156.0
+scale = Vector2(0.807785, 0.823593)
+texture = ExtResource("10_g2l56")
+
+[node name="ConfirmButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 362.0
+offset_top = 2275.0
+offset_right = 767.0
+offset_bottom = 2423.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "  Confirm  "
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -146,12 +164,6 @@ theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 25
-
-[node name="ConfirmButton" type="Button" parent="MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 8
-text = "  Confirm  "
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -168,7 +180,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
 size_flags_stretch_ratio = 0.0
-texture = ExtResource("3_nswn0")
+texture = ExtResource("3_cjxsl")
 
 [node name="prev" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/TextureRect"]
 layout_mode = 1
@@ -211,18 +223,18 @@ theme_override_constants/separation = 50
 layout_mode = 2
 theme_override_constants/margin_top = 250
 
-[node name="CPU" type="MenuButton" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer"]
+[node name="XPower" type="MenuButton" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer"]
 custom_minimum_size = Vector2(800, 250)
 layout_mode = 2
 mouse_filter = 2
-theme = ExtResource("1_ljk7d")
+theme = ExtResource("1_bxtrm")
 theme_type_variation = &"AlphaCircle"
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = ExtResource("9_4lkfc")
+theme_override_styles/normal = ExtResource("9_lwyaj")
 flat = false
 alignment = 2
 
-[node name="Label" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer/CPU"]
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer/XPower"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -235,21 +247,31 @@ offset_right = 263.0
 offset_bottom = 36.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "CPU: AMD Ryzen 3600"
+text = "XPOWER Pulse DIMM Kit
+ 32GB, DDR5-6000"
 label_settings = SubResource("LabelSettings_75npw")
+horizontal_alignment = 1
 
-[node name="GPU" type="MenuButton" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer"]
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer/XPower"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 95.0
+offset_right = 55.0
+offset_bottom = 154.0
+color = Color(0.964706, 0.486275, 0.490196, 1)
+
+[node name="Corsair" type="MenuButton" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer"]
 custom_minimum_size = Vector2(800, 250)
 layout_mode = 2
 mouse_filter = 2
-theme = ExtResource("1_ljk7d")
+theme = ExtResource("1_bxtrm")
 theme_type_variation = &"AlphaCircle"
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = ExtResource("9_4lkfc")
+theme_override_styles/normal = ExtResource("9_lwyaj")
 flat = false
 alignment = 2
 
-[node name="Label" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer/GPU"]
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer/Corsair"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -262,21 +284,23 @@ offset_right = 263.0
 offset_bottom = 36.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "GPU: AMD RX 580 8GB"
+text = "Corsair Venegance LPX DIMM 
+Kit 32GB, DDR4-3200"
 label_settings = SubResource("LabelSettings_75npw")
+horizontal_alignment = 1
 
-[node name="RAM" type="MenuButton" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer"]
+[node name="G_Skill 1" type="MenuButton" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer"]
 custom_minimum_size = Vector2(800, 250)
 layout_mode = 2
 mouse_filter = 2
-theme = ExtResource("1_ljk7d")
+theme = ExtResource("1_bxtrm")
 theme_type_variation = &"AlphaCircle"
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = ExtResource("9_4lkfc")
+theme_override_styles/normal = ExtResource("9_lwyaj")
 flat = false
 alignment = 2
 
-[node name="Label" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer/RAM"]
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer/G_Skill 1"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -289,21 +313,30 @@ offset_right = 263.0
 offset_bottom = 36.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "RAM: DDR4 32GB 3600Mhz"
+text = "H.Skill Aegis DIMM
+Kit 32GB, DDR4.3200"
 label_settings = SubResource("LabelSettings_75npw")
+horizontal_alignment = 1
 
-[node name="SSD" type="MenuButton" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer"]
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer/G_Skill 1"]
+offset_left = 40.0
+offset_top = 95.0
+offset_right = 55.0
+offset_bottom = 154.0
+color = Color(0.694118, 0.941176, 0.52549, 1)
+
+[node name="G_Skill 2" type="MenuButton" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer"]
 custom_minimum_size = Vector2(800, 250)
 layout_mode = 2
 mouse_filter = 2
-theme = ExtResource("1_ljk7d")
+theme = ExtResource("1_bxtrm")
 theme_type_variation = &"AlphaCircle"
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = ExtResource("9_4lkfc")
+theme_override_styles/normal = ExtResource("9_lwyaj")
 flat = false
 alignment = 2
 
-[node name="Label" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer/SSD"]
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer/G_Skill 2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -316,21 +349,23 @@ offset_right = 263.0
 offset_bottom = 36.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "SSD: 1TB NVME SSD"
+text = "G.SKill Aegis DIMM 
+Kit 16GB DDR4.3200"
 label_settings = SubResource("LabelSettings_75npw")
+horizontal_alignment = 1
 
-[node name="MOBO" type="MenuButton" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer"]
+[node name="Corsair2" type="MenuButton" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer"]
 custom_minimum_size = Vector2(800, 250)
 layout_mode = 2
 mouse_filter = 2
-theme = ExtResource("1_ljk7d")
+theme = ExtResource("1_bxtrm")
 theme_type_variation = &"AlphaCircle"
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = ExtResource("9_4lkfc")
+theme_override_styles/normal = ExtResource("9_lwyaj")
 flat = false
 alignment = 2
 
-[node name="Label" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer/MOBO"]
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer/Corsair2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -343,8 +378,17 @@ offset_right = 263.0
 offset_bottom = 36.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "MOBO: B450 Carbon"
+text = "Corsair Venegance RGB Pro
+32GB, DDR4-3200"
 label_settings = SubResource("LabelSettings_75npw")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer/Corsair2"]
+offset_left = 40.0
+offset_top = 95.0
+offset_right = 55.0
+offset_bottom = 154.0
+color = Color(0.694118, 0.941176, 0.52549, 1)
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer"]
 layout_mode = 2
@@ -356,7 +400,7 @@ layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 size_flags_stretch_ratio = 0.0
-texture = ExtResource("3_nswn0")
+texture = ExtResource("3_cjxsl")
 flip_h = true
 
 [node name="next" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/TextureRect2"]

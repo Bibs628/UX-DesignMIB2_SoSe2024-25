@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Script/MenuMain.gd" id="2_3j52p"]
 [ext_resource type="Texture2D" uid="uid://c0jc4pqmb52g8" path="res://Assets/PC.png" id="2_y8sha"]
 [ext_resource type="Texture2D" uid="uid://b3fronnba6jse" path="res://Assets/Logo_weiss.png" id="4_rygkk"]
-[ext_resource type="AudioStream" uid="uid://c46kuwo4q7jab" path="res://Assets/Sounds/WARTFX_PowerUp_16.wav" id="5_6yqon"]
+[ext_resource type="AudioStream" uid="uid://d4ef3c23x4rnr" path="res://Assets/Sounds/WARTFX_PowerUp_16.wav" id="5_6yqon"]
 
 [sub_resource type="Animation" id="Animation_fr6io"]
 resource_name = "IntroTap"
