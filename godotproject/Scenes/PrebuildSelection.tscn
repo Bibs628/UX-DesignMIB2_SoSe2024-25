@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c0jc4pqmb52g8" path="res://Assets/PC.png" id="8_gjx2m"]
 [ext_resource type="Texture2D" uid="uid://b6gjosq341bkc" path="res://Assets/Gaming2.png" id="9_ty3kk"]
 [ext_resource type="Texture2D" uid="uid://dtjovdeo8lupf" path="res://Assets/Gaming3.png" id="10_dkcge"]
-[ext_resource type="Texture2D" uid="uid://clma2m31m654s" path="res://Assets/arrow.png" id="11_sf65b"]
+[ext_resource type="Texture2D" uid="uid://c0im3nwej2nx4" path="res://Assets/arrow.png" id="11_sf65b"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eu316"]
 font_size = 75
@@ -66,6 +66,7 @@ theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 25
 
 [node name="SelectButton" type="Button" parent="MarginContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 10
@@ -185,6 +186,7 @@ texture = ExtResource("6_yyt8q")
 
 [node name="Label" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer/Office 2"]
 visible = false
+layout_mode = 0
 offset_left = 385.0
 offset_top = 167.0
 offset_right = 655.0
@@ -212,6 +214,7 @@ texture = ExtResource("7_62s6n")
 
 [node name="Label" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer/Office 3"]
 visible = false
+layout_mode = 0
 offset_left = 385.0
 offset_top = 167.0
 offset_right = 655.0
@@ -238,6 +241,7 @@ texture = ExtResource("8_gjx2m")
 
 [node name="Label" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer/Gaming 1"]
 visible = false
+layout_mode = 0
 offset_left = 385.0
 offset_top = 167.0
 offset_right = 655.0
@@ -264,6 +268,7 @@ texture = ExtResource("9_ty3kk")
 
 [node name="Label" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer/Gaming 2"]
 visible = false
+layout_mode = 0
 offset_left = 385.0
 offset_top = 167.0
 offset_right = 655.0
@@ -290,6 +295,7 @@ texture = ExtResource("10_dkcge")
 
 [node name="Label" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/SelectionContainer/Gaming 3"]
 visible = false
+layout_mode = 0
 offset_left = 385.0
 offset_top = 167.0
 offset_right = 655.0
@@ -345,6 +351,7 @@ grow_vertical = 2
 
 [node name="BackButton" type="TextureRect" parent="."]
 layout_direction = 1
+layout_mode = 0
 offset_left = 28.0
 offset_top = 37.0
 offset_right = 108.0
@@ -374,6 +381,18 @@ theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_vbtvx")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_vbtvx")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vbtvx")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_vbtvx")
+
+[node name="SelectButton" type="Button" parent="."]
+z_index = 5
+layout_mode = 2
+offset_left = 373.0
+offset_top = 2272.0
+offset_right = 755.0
+offset_bottom = 2427.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_t1jse")
+text = "Select"
 
 [connection signal="pressed" from="MarginContainer/MarginContainer/HBoxContainer/TextureRect/prev" to="." method="_on_prev_pressed"]
 [connection signal="pressed" from="MarginContainer/MarginContainer/HBoxContainer/TextureRect2/next" to="." method="_on_next_pressed"]

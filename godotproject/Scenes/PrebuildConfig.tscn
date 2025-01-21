@@ -1,14 +1,14 @@
 [gd_scene load_steps=13 format=3 uid="uid://cr7r085gvdhxs"]
 
-[ext_resource type="Theme" uid="uid://hr4juv1yygjn" path="res://ByteCraft.tres" id="1_8prd8"]
-[ext_resource type="Script" path="res://Scenes/prebuit_config.gd" id="2_7us3p"]
-[ext_resource type="Texture2D" uid="uid://clma2m31m654s" path="res://Assets/arrow.png" id="3_epxjr"]
-[ext_resource type="StyleBox" uid="uid://bw4prfqkw3dma" path="res://CircleButton.tres" id="4_dfaso"]
-[ext_resource type="Texture2D" uid="uid://bxnj0rruirusg" path="res://Assets/BuilderParts/gpu.png" id="4_ng0ry"]
-[ext_resource type="Texture2D" uid="uid://dxofrov6xubfs" path="res://Assets/BuilderParts/cpu.webp" id="5_6m8d2"]
-[ext_resource type="Texture2D" uid="uid://b7njyxcyvtqeh" path="res://Assets/BuilderParts/ram.webp" id="5_ehl8x"]
-[ext_resource type="Texture2D" uid="uid://8x6rk51l85pp" path="res://Assets/BuilderParts/ssd.png" id="6_2j87k"]
-[ext_resource type="Texture2D" uid="uid://b5i5fxas1orth" path="res://Assets/BuilderParts/mobo.png" id="7_6bb34"]
+[ext_resource type="Theme" uid="uid://hr4juv1yygjn" path="res://ByteCraft.tres" id="1_ljk7d"]
+[ext_resource type="Script" path="res://Scenes/prebuild_config.gd" id="2_j727r"]
+[ext_resource type="Texture2D" uid="uid://c0im3nwej2nx4" path="res://Assets/arrow.png" id="3_nswn0"]
+[ext_resource type="Texture2D" uid="uid://hv8mq2wgyqgd" path="res://Assets/BuilderParts/cpu.webp" id="4_o5t6e"]
+[ext_resource type="Texture2D" uid="uid://5174thllfot8" path="res://Assets/BuilderParts/gpu.png" id="5_neoiq"]
+[ext_resource type="Texture2D" uid="uid://dmgepyb1ypusk" path="res://Assets/BuilderParts/ram.webp" id="6_uuisy"]
+[ext_resource type="Texture2D" uid="uid://bgtkopiixko7o" path="res://Assets/BuilderParts/ssd.png" id="7_unuwq"]
+[ext_resource type="Texture2D" uid="uid://dufy4fq40bwt" path="res://Assets/BuilderParts/mobo.png" id="8_6j715"]
+[ext_resource type="StyleBox" uid="uid://bw4prfqkw3dma" path="res://CircleButton.tres" id="9_4lkfc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eu316"]
 font_size = 75
@@ -29,8 +29,8 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 2
 size_flags_vertical = 6
-theme = ExtResource("1_8prd8")
-script = ExtResource("2_7us3p")
+theme = ExtResource("1_ljk7d")
+script = ExtResource("2_j727r")
 metadata/_edit_use_anchors_ = true
 
 [node name="BG" type="Panel" parent="."]
@@ -39,7 +39,7 @@ layout_direction = 1
 layout_mode = 2
 offset_right = 1125.0
 offset_bottom = 2436.0
-theme = ExtResource("1_8prd8")
+theme = ExtResource("1_ljk7d")
 
 [node name="Selection" type="Label" parent="."]
 custom_minimum_size = Vector2(1000, 200)
@@ -49,7 +49,7 @@ offset_top = 673.0
 offset_right = 1049.0
 offset_bottom = 873.0
 size_flags_vertical = 8
-theme = ExtResource("1_8prd8")
+theme = ExtResource("1_ljk7d")
 label_settings = SubResource("LabelSettings_eu316")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -60,7 +60,7 @@ offset_left = 15.0
 offset_top = 20.0
 offset_right = 95.0
 offset_bottom = 100.0
-texture = ExtResource("3_epxjr")
+texture = ExtResource("3_nswn0")
 
 [node name="BackButton" type="Button" parent="TextureRect"]
 layout_mode = 1
@@ -84,7 +84,7 @@ offset_top = 432.0
 offset_right = 602.0
 offset_bottom = 731.0
 scale = Vector2(1.66098, 1.64703)
-texture = ExtResource("5_6m8d2")
+texture = ExtResource("4_o5t6e")
 
 [node name="GPU" type="TextureRect" parent="Pics"]
 visible = false
@@ -94,7 +94,7 @@ offset_top = 313.0
 offset_right = 1266.0
 offset_bottom = 1313.0
 scale = Vector2(0.811469, 0.811268)
-texture = ExtResource("4_ng0ry")
+texture = ExtResource("5_neoiq")
 
 [node name="RAM" type="TextureRect" parent="Pics"]
 visible = false
@@ -103,7 +103,7 @@ offset_left = -5.0
 offset_top = 383.0
 offset_right = 1095.0
 offset_bottom = 973.0
-texture = ExtResource("5_ehl8x")
+texture = ExtResource("6_uuisy")
 
 [node name="SSD" type="TextureRect" parent="Pics"]
 visible = false
@@ -113,7 +113,7 @@ offset_top = 379.0
 offset_right = 682.0
 offset_bottom = 879.0
 scale = Vector2(1.51351, 1.3788)
-texture = ExtResource("6_2j87k")
+texture = ExtResource("7_unuwq")
 
 [node name="MOBO" type="TextureRect" parent="Pics"]
 visible = false
@@ -123,7 +123,7 @@ offset_top = 222.0
 offset_right = 927.0
 offset_bottom = 1187.0
 scale = Vector2(0.89949, 0.912237)
-texture = ExtResource("7_6bb34")
+texture = ExtResource("8_6j715")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -163,7 +163,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
 size_flags_stretch_ratio = 0.0
-texture = ExtResource("3_epxjr")
+texture = ExtResource("3_nswn0")
 
 [node name="prev" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/TextureRect"]
 layout_mode = 1
@@ -210,10 +210,10 @@ theme_override_constants/margin_top = 250
 custom_minimum_size = Vector2(800, 250)
 layout_mode = 2
 mouse_filter = 2
-theme = ExtResource("1_8prd8")
+theme = ExtResource("1_ljk7d")
 theme_type_variation = &"AlphaCircle"
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = ExtResource("4_dfaso")
+theme_override_styles/normal = ExtResource("9_4lkfc")
 flat = false
 alignment = 2
 
@@ -237,10 +237,10 @@ label_settings = SubResource("LabelSettings_75npw")
 custom_minimum_size = Vector2(800, 250)
 layout_mode = 2
 mouse_filter = 2
-theme = ExtResource("1_8prd8")
+theme = ExtResource("1_ljk7d")
 theme_type_variation = &"AlphaCircle"
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = ExtResource("4_dfaso")
+theme_override_styles/normal = ExtResource("9_4lkfc")
 flat = false
 alignment = 2
 
@@ -264,10 +264,10 @@ label_settings = SubResource("LabelSettings_75npw")
 custom_minimum_size = Vector2(800, 250)
 layout_mode = 2
 mouse_filter = 2
-theme = ExtResource("1_8prd8")
+theme = ExtResource("1_ljk7d")
 theme_type_variation = &"AlphaCircle"
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = ExtResource("4_dfaso")
+theme_override_styles/normal = ExtResource("9_4lkfc")
 flat = false
 alignment = 2
 
@@ -291,10 +291,10 @@ label_settings = SubResource("LabelSettings_75npw")
 custom_minimum_size = Vector2(800, 250)
 layout_mode = 2
 mouse_filter = 2
-theme = ExtResource("1_8prd8")
+theme = ExtResource("1_ljk7d")
 theme_type_variation = &"AlphaCircle"
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = ExtResource("4_dfaso")
+theme_override_styles/normal = ExtResource("9_4lkfc")
 flat = false
 alignment = 2
 
@@ -318,10 +318,10 @@ label_settings = SubResource("LabelSettings_75npw")
 custom_minimum_size = Vector2(800, 250)
 layout_mode = 2
 mouse_filter = 2
-theme = ExtResource("1_8prd8")
+theme = ExtResource("1_ljk7d")
 theme_type_variation = &"AlphaCircle"
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = ExtResource("4_dfaso")
+theme_override_styles/normal = ExtResource("9_4lkfc")
 flat = false
 alignment = 2
 
@@ -351,7 +351,7 @@ layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 size_flags_stretch_ratio = 0.0
-texture = ExtResource("3_epxjr")
+texture = ExtResource("3_nswn0")
 flip_h = true
 
 [node name="next" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer/TextureRect2"]

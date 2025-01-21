@@ -7,6 +7,7 @@ var targetScroll = 0
 var prevSelec 
 
 func _ready() -> void:
+	$SelectButton.pressed.connect(hover)
 	_set_selection()
 	
 func _set_selection():
@@ -72,4 +73,10 @@ func get_selected_value():
 	for object in object_container.get_children():
 		if object.get_global_rect().has_point(selectedPosition):
 			return object
-	
+
+
+func hover():
+	print("e")
+	var loading_screen = LoadingScreen.new()
+	loading_screen.target_scene = "res://Scenes/PrebuildConfig.tscn"
+	get_tree().change_scene_to_file("res://Scenes/LoadingScreen.tscn")
