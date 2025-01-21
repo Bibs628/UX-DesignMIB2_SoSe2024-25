@@ -13,6 +13,7 @@ var prevSelec
 func _ready() -> void:
 	$TextureRect/BackButton.pressed.connect(back)
 	$ChangeButton.pressed.connect(change)
+	$ConfirmButton.pressed.connect(exploded_view)
 	_set_selection()
 	
 
@@ -80,7 +81,14 @@ func get_selected_value():
 func back():
 	print("back")
 	get_tree().change_scene_to_file("res://Scenes/PrebuildSelection.tscn")
-	
+
+
 func change():
 	print("change")
 	get_tree().change_scene_to_file("res://Scenes/ChangePart.tscn")
+
+
+func exploded_view():
+	var loading_screen = LoadingScreen.new()
+	loading_screen.target_scene = "res://Scenes/ExplodedView.tscn"
+	get_tree().change_scene_to_file("res://Scenes/LoadingScreen.tscn")
