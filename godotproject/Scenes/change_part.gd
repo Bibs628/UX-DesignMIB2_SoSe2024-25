@@ -55,6 +55,8 @@ func _tween_scroll(scrollValue):
 
 func _select_deselect_highlight():
 	var selectedNode = get_selected_value()
+	if selectedNode == null:
+		selectedNode = %SelectionContainer.get_node("XPower")
 	
 	for pic in pics_container.get_children():
 		pic.visible = pic == selectedNode

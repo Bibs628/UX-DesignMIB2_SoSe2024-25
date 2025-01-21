@@ -56,17 +56,17 @@ func _tween_scroll(scrollValue):
 
 func _select_deselect_highlight():
 	var selectedNode = get_selected_value()
+	if selectedNode == null:
+		selectedNode = %SelectionContainer.get_node("CPU")
+	print(selectedNode)
 	
 	for pic in pics_container.get_children():
+		pic.visible = pic == selectedNode
 		for object in object_container.get_children():
-			if object == prevSelec  && object.name == pic.name:
-				pic.visible = false
-			if object == selectedNode: 
-				object.modulate = Color(1,1,1)
-				if object.name == pic.name: pic.visible = true
-				
-			else: 
-				object.modulate = Color(0,0,0)
+			if object is not MarginContainer:
+				object.modulate = Color(1, 1, 1) if object == selectedNode else Color(0, 0, 0)
+				if object == selectedNode: 
+					if object.name == pic.name: pic.visible = true
 	
 	prevSelec = selectedNode
 
