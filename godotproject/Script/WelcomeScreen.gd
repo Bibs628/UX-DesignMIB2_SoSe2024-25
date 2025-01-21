@@ -6,6 +6,4 @@ func _ready() -> void:
 
 
 func hover():
-	var loading_screen = LoadingScreen.new()
-	loading_screen.target_scene = "res://Scenes/PrebuildSelection.tscn"
-	get_tree().change_scene_to_file("res://Scenes/LoadingScreen.tscn")
+	get_tree().change_scene_to_file("res://Scenes/ChooseNewPC.tscn")

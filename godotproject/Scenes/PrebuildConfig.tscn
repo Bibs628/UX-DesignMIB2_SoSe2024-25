@@ -2,12 +2,12 @@
 
 [ext_resource type="Theme" uid="uid://hr4juv1yygjn" path="res://ByteCraft.tres" id="1_ljk7d"]
 [ext_resource type="Script" path="res://Scenes/prebuild_config.gd" id="2_j727r"]
-[ext_resource type="Texture2D" uid="uid://c0im3nwej2nx4" path="res://Assets/arrow.png" id="3_nswn0"]
-[ext_resource type="Texture2D" uid="uid://hv8mq2wgyqgd" path="res://Assets/BuilderParts/cpu.webp" id="4_o5t6e"]
-[ext_resource type="Texture2D" uid="uid://5174thllfot8" path="res://Assets/BuilderParts/gpu.png" id="5_neoiq"]
-[ext_resource type="Texture2D" uid="uid://dmgepyb1ypusk" path="res://Assets/BuilderParts/ram.webp" id="6_uuisy"]
-[ext_resource type="Texture2D" uid="uid://bgtkopiixko7o" path="res://Assets/BuilderParts/ssd.png" id="7_unuwq"]
-[ext_resource type="Texture2D" uid="uid://dufy4fq40bwt" path="res://Assets/BuilderParts/mobo.png" id="8_6j715"]
+[ext_resource type="Texture2D" uid="uid://clma2m31m654s" path="res://Assets/arrow.png" id="3_nswn0"]
+[ext_resource type="Texture2D" uid="uid://dxofrov6xubfs" path="res://Assets/BuilderParts/cpu.webp" id="4_o5t6e"]
+[ext_resource type="Texture2D" uid="uid://bxnj0rruirusg" path="res://Assets/BuilderParts/gpu.png" id="5_neoiq"]
+[ext_resource type="Texture2D" uid="uid://b7njyxcyvtqeh" path="res://Assets/BuilderParts/ram.webp" id="6_uuisy"]
+[ext_resource type="Texture2D" uid="uid://8x6rk51l85pp" path="res://Assets/BuilderParts/ssd.png" id="7_unuwq"]
+[ext_resource type="Texture2D" uid="uid://b5i5fxas1orth" path="res://Assets/BuilderParts/mobo.png" id="8_6j715"]
 [ext_resource type="StyleBox" uid="uid://bw4prfqkw3dma" path="res://CircleButton.tres" id="9_4lkfc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eu316"]

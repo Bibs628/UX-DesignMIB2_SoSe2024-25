@@ -88,4 +88,4 @@ func hover():
 
 func back():
 	print("back")
-	get_tree().change_scene_to_file("res://Scenes/Welcome.tscn")
+	get_tree().change_scene_to_file("res://Scenes/ChooseNewPC.tscn")

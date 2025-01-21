@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://hr4juv1yygjn" path="res://ByteCraft.tres" id="1_ltcs4"]
 [ext_resource type="Script" path="res://Script/WelcomeScreen.gd" id="2_tv53m"]
-[ext_resource type="FontFile" uid="uid://cjrr7ilbn2dsg" path="res://Fonts/Blackpast DEMO.ttf" id="3_3limo"]
+[ext_resource type="FontFile" uid="uid://lrk20shvssdu" path="res://Fonts/Blackpast DEMO.ttf" id="3_3limo"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
