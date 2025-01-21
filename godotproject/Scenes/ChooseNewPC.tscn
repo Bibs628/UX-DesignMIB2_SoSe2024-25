@@ -1,8 +1,45 @@
-[gd_scene load_steps=4 format=3 uid="uid://kcd02acsf1bw"]
+[gd_scene load_steps=8 format=3 uid="uid://kcd02acsf1bw"]
 
 [ext_resource type="Theme" uid="uid://hr4juv1yygjn" path="res://ByteCraft.tres" id="1_jfxml"]
 [ext_resource type="Script" path="res://Scenes/choose_new_pc.gd" id="2_4jcxq"]
 [ext_resource type="Texture2D" uid="uid://c0im3nwej2nx4" path="res://Assets/arrow.png" id="3_27142"]
+[ext_resource type="AudioStream" uid="uid://2ed0f4eavkc8" path="res://Assets/Sounds/WA Dubstep KICK 01.wav" id="4_r3elt"]
+
+[sub_resource type="Animation" id="Animation_42oyl"]
+resource_name = "Click"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Question:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_de2gh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Question:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xvvhy"]
+_data = {
+"Click": SubResource("Animation_42oyl"),
+"RESET": SubResource("Animation_de2gh")
+}
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -90,3 +127,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_r3elt")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xvvhy")
+}
