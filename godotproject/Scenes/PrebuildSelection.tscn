@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c0jc4pqmb52g8" path="res://Assets/PC.png" id="8_gjx2m"]
 [ext_resource type="Texture2D" uid="uid://b6gjosq341bkc" path="res://Assets/Gaming2.png" id="9_ty3kk"]
 [ext_resource type="Texture2D" uid="uid://dtjovdeo8lupf" path="res://Assets/Gaming3.png" id="10_dkcge"]
-[ext_resource type="Texture2D" uid="uid://clma2m31m654s" path="res://Assets/arrow.png" id="11_sf65b"]
+[ext_resource type="Texture2D" uid="uid://c0im3nwej2nx4" path="res://Assets/arrow.png" id="11_sf65b"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eu316"]
 font_size = 75

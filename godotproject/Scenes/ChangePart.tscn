@@ -2,15 +2,15 @@
 
 [ext_resource type="Theme" uid="uid://hr4juv1yygjn" path="res://ByteCraft.tres" id="1_bxtrm"]
 [ext_resource type="Script" path="res://Scenes/change_part.gd" id="2_5wo2d"]
-[ext_resource type="Texture2D" uid="uid://clma2m31m654s" path="res://Assets/arrow.png" id="3_cjxsl"]
-[ext_resource type="Texture2D" uid="uid://cie7u8mfefn78" path="res://Assets/info.png" id="4_ll3l2"]
-[ext_resource type="Texture2D" uid="uid://cfdftoeo2iutx" path="res://Assets/search.png" id="5_bp6d2"]
-[ext_resource type="Texture2D" uid="uid://b8sxtwrnqqhe" path="res://Assets/BuilderParts/RAM/xpower.png" id="6_5m646"]
-[ext_resource type="Texture2D" uid="uid://b1lptp6edsbpd" path="res://Assets/BuilderParts/RAM/corsairLPX.png" id="7_66gn1"]
-[ext_resource type="Texture2D" uid="uid://dagouvjjho13q" path="res://Assets/BuilderParts/RAM/g.skill32.webp" id="8_inr4s"]
+[ext_resource type="Texture2D" uid="uid://c0im3nwej2nx4" path="res://Assets/arrow.png" id="3_cjxsl"]
+[ext_resource type="Texture2D" uid="uid://dg75t0hd1mgh6" path="res://Assets/info.png" id="4_ll3l2"]
+[ext_resource type="Texture2D" uid="uid://bpp1klgp0oanc" path="res://Assets/search.png" id="5_bp6d2"]
+[ext_resource type="Texture2D" uid="uid://bic26bbkk1xcb" path="res://Assets/BuilderParts/RAM/xpower.png" id="6_5m646"]
+[ext_resource type="Texture2D" uid="uid://2hd7tufway06" path="res://Assets/BuilderParts/RAM/corsairLPX.png" id="7_66gn1"]
+[ext_resource type="Texture2D" uid="uid://cui1t3hvv6e1v" path="res://Assets/BuilderParts/RAM/g.skill32.webp" id="8_inr4s"]
 [ext_resource type="StyleBox" uid="uid://bw4prfqkw3dma" path="res://CircleButton.tres" id="9_lwyaj"]
-[ext_resource type="Texture2D" uid="uid://bhb3uus6vd0yu" path="res://Assets/BuilderParts/RAM/gskill16.png" id="9_yxqt4"]
-[ext_resource type="Texture2D" uid="uid://kdhv0bmckjdl" path="res://Assets/BuilderParts/RAM/corsairRGB.webp" id="10_g2l56"]
+[ext_resource type="Texture2D" uid="uid://bl1mgn4xurrrr" path="res://Assets/BuilderParts/RAM/gskill16.png" id="9_yxqt4"]
+[ext_resource type="Texture2D" uid="uid://c34imu2kwk0kj" path="res://Assets/BuilderParts/RAM/corsairRGB.webp" id="10_g2l56"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eu316"]
 font_size = 75

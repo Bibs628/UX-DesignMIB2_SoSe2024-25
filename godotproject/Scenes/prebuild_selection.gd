@@ -12,6 +12,7 @@ var prevSelec
 func _ready() -> void:
 	$SelectButton.pressed.connect(hover)
 	$BackButton/backButton.pressed.connect(back)
+	#get_selected_value()
 	_set_selection()
 	
 
@@ -54,22 +55,16 @@ func _tween_scroll(scrollValue):
 
 func _select_deselect_highlight():
 	var selectedNode = get_selected_value()
-	
+	if selectedNode == null:
+		selectedNode = %SelectionContainer.get_node("Office 1")
+		
 	for object in object_container.get_children():
-		if object == prevSelec:
-			# object.size.y = object.size.y / 2
-			object.get_child(1).visible = false
-			
+		if object is not MarginContainer:
+			object.get_node("Label").visible = object == selectedNode
+			object.modulate = Color(1,1,1) if object == selectedNode else Color(0,0,0)
 		if object == selectedNode: 
-			object.modulate = Color(1,1,1)
 			$Selection.text = "     " + object.text
-			# object.size.y = object.size.y * 2
-			object.get_child(1).visible = true
-			
-		else: 
-			object.modulate = Color(0,0,0)
-			# object.position.y += object.size.y
-	
+
 	prevSelec = selectedNode
 
 func get_selected_value():
