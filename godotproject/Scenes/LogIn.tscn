@@ -4,10 +4,10 @@
 [ext_resource type="Theme" uid="uid://hr4juv1yygjn" path="res://ByteCraft.tres" id="1_soe3g"]
 [ext_resource type="StyleBox" uid="uid://bepk585hraffg" path="res://ButtonCubePressed.tres" id="3_b632r"]
 [ext_resource type="StyleBox" uid="uid://rhvkbeslqi3k" path="res://ButtonCube.tres" id="3_kft5w"]
-[ext_resource type="AudioStream" uid="uid://c8j263murpkuv" path="res://Assets/Sounds/WAGFX_Notification_48.wav" id="5_1gcdf"]
-[ext_resource type="AudioStream" uid="uid://csm7u00y6f77h" path="res://Assets/Sounds/WAGFX_Button_61.wav" id="6_w2se2"]
-[ext_resource type="AudioStream" uid="uid://chho3oym8x18m" path="res://Assets/Sounds/WARTFX_Mechanic_22.wav" id="7_xp6pn"]
-[ext_resource type="Texture2D" uid="uid://do3t7kjkioxdl" path="res://Assets/Login_Linie.png" id="8_2b85q"]
+[ext_resource type="AudioStream" uid="uid://cdfu2e7h3kd8w" path="res://Assets/Sounds/WAGFX_Notification_48.wav" id="5_1gcdf"]
+[ext_resource type="AudioStream" uid="uid://d0pwh0fwj5rgd" path="res://Assets/Sounds/WAGFX_Button_61.wav" id="6_w2se2"]
+[ext_resource type="AudioStream" uid="uid://d0pyo1srbw34a" path="res://Assets/Sounds/WARTFX_Mechanic_22.wav" id="7_xp6pn"]
+[ext_resource type="Texture2D" uid="uid://bwa4t0kmjomcv" path="res://Assets/Login_Linie.png" id="8_2b85q"]
 
 [node name="LogIn" type="Control"]
 layout_mode = 3

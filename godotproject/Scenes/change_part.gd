@@ -21,6 +21,7 @@ func _set_selection():
 	_select_deselect_highlight()
 
 func _on_prev_pressed() -> void:
+	$ButtonClick.play()
 	var scrollValue = targetScroll - _get_space_between()
 	if scrollValue < 0 : scrollValue = _get_space_between() * 5
 	
@@ -31,6 +32,7 @@ func _on_prev_pressed() -> void:
 	_select_deselect_highlight()
 
 func _on_next_pressed() -> void:
+	$ButtonClick.play()
 	var scrollValue = targetScroll + _get_space_between()
 	if scrollValue > _get_space_between() * 5: scrollValue = 0
 	
@@ -78,4 +80,5 @@ func get_selected_value():
 
 func back():
 	print("back")
+	$ButtonClick.play()
 	get_tree().change_scene_to_file("res://Scenes/PrebuildConfig.tscn")

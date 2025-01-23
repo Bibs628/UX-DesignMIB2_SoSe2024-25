@@ -76,11 +76,13 @@ func get_selected_value():
 
 
 func hover():
+	$Buttons.play()
 	var loading_screen = LoadingScreen.new()
 	loading_screen.target_scene = "res://Scenes/PrebuildConfig.tscn"
 	get_tree().change_scene_to_file("res://Scenes/LoadingScreen.tscn")
 
 
 func back():
+	$Buttons.play()
 	print("back")
 	get_tree().change_scene_to_file("res://Scenes/ChooseNewPC.tscn")
